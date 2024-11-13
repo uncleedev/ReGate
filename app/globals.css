@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+li {
+    font-weight: 700;
+}
+
+/* TYPOGRAPHY */
+h1 {
+    @apply text-[42px] font-bold
+}
+
+h2 {
+    @apply text-[24px] font-semibold
+}
+
+h3 {
+    @apply text-[20px] font-medium
+}
+
+h4 {
+    @apply text-[18px] font-medium
+
+}
+
+p {
+    @apply text-base font-normal
+}
+
+.row {
+    @apply border-b-2  flex items-center justify-between  p-3
+}
+
+.data {
+    @apply p-2  flex  justify-center w-full
+}
+
+.paddingvr {
+    @apply p-[24px] lg:py-[50px] lg:px-[160px] 
+}
+
+
+/* NAVBAR */
+.menu__bar {
+    @apply  text-white absolute w-full px-[160px] pt-12 hidden md:block
+}
+
+
+.link {
+    @apply text-lg font-medium hover:text-[#FEFE00]
+}
+
+.menu__bar ul li {
+    padding: 10px 30px;
+    position: relative;
+}
+
+.dropdown__menu {
+@apply hidden absolute left-0 top-full bg-white text-black
+}
+
+.dropdown__menu li .link:hover {
+     @apply text-[#044721]
+}
+
+.dropdown__menu ul {
+    @apply block m-3
+}
+
+.menu__bar ul li:hover .dropdown__menu {
+    @apply block
+}
+
+
+.hero-section {
+    background-image: url('../public/images/prrc-building.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* TABLE  */
+
+.program-table {
+    @apply w-full 
+}
+
+.program-table tbody {
+    @apply  w-full flex flex-col
+}
+
+.program-table tbody .course { 
+    @apply w-full flex justify-between items-center
+}
+
+.program-table th, .program-table td {
+    @apply border p-2 w-full text-center
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+/* MODAL ANIMATION */
+
+/* .fade-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms, transform 300ms;
+  } */
