@@ -3,49 +3,53 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-
 export default function Navbar() {
   return (
-    <nav className='menu__bar z-10'>
-        <ul className='flex flex-col md:flex-row justify-between items-center'>
-            <li>
-                <Link className='link' href={""}>Portal ▼</Link>
-                <div className='dropdown__menu'>
-                    <ul>
-                    <li><Link className='link' href={"/student/login"}>Student</Link></li>
-                    <li><Link className='link' href={"/instructor/login"}>Instructor</Link></li>
-                    </ul>
-                </div>
+    <header className='w-full px-[160px] pt-12 absolute top-0 z-30 text-white'>
+        <ul className='menu'>
+            <li className='menu__item relative group'>
+                <Link href={"#"}>Portal ▼</Link>
+                <ul className='dropdown__menu group-hover:block'>
+                    <Link href={"/student/signin"}><li className='dropdown__item w-[200px]'>Student</li></Link>
+                    <Link href={"/instructor/signin"}><li className='dropdown__item'>Instructor</li></Link>
+                    <Link href={"/admin/signin"}> <li className='dropdown__item'>Admin</li></Link>
+                </ul>
             </li>
 
-            <li><Link className='link' href={"/enrollment"}>Enrollment</Link></li>
-            
-            <li>
-            <Link className='link' href={""}>Organizations ▼</Link>
-                <div className='dropdown__menu'>
-                    <ul>
-                    <li><Link className='link' href={"/organizations/css"}>CSS</Link></li>
-                    <li><Link className='link' href={""}>Sandbox</Link></li>
-                    </ul>
-                </div>
+            <li className='menu__item'><Link href={"/enrollment"}>Enrollment</Link></li>
+
+            <li className='menu__item relative group'>
+                <Link href={"#"}>Organizations ▼</Link>
+                <ul className='dropdown__menu group-hover:block'>
+                    <Link href={"/organizations/css"}><li className='dropdown__item w-[200px]'>CSS</li></Link>
+                    <Link href={"/organizations/cdmssg"}><li className='dropdown__item'>CDMSSG</li></Link>
+                    <Link href={"/organizations/sportsclub"}><li className='dropdown__item'>SPORTSCLUB</li></Link>
+                    <Link href={"/organizations/ibesc"}><li className='dropdown__item'>IBESC</li></Link>
+                    <Link href={"/organizations/educsociety"}><li className='dropdown__item'>EDUCSOCIETY</li></Link>
+                    <Link href={"/organizations/sandbox"}><li className='dropdown__item'>SANDBOX</li></Link>
+                </ul>
             </li>
 
-            <li><Link className='link' href={"/"}><Image height={100} width={100} src={require("../../public/images/cdm-logo.png")} /></Link></li>
-
-            <li>
-                <Link className='link' href={""}>Administrations ▼</Link>
-                <div className='dropdown__menu'>
-                    <ul>
-                    <li><Link className='link' href={""}>VVPA</Link></li>
-                    <li><Link className='link' href={""}>Registrar</Link></li>
-                    </ul>
-                </div>
+            <li className='menu__item'>
+                <Link href={"/"}>
+                    <Image src={require("@/public/images/cdm-logo.png")} height={100} width={100}/>
+                </Link>
             </li>
 
-            <li><Link className='link' href={"/programs"}>Programs</Link></li>
+            <li className='menu__item relative group'>
+                <Link href={"/administrations"}>Administrations ▼</Link>
+                <ul className='dropdown__menu group-hover:block w-[500px]'>
+                    <Link href={"/administrations/office-of-the-president"}><li className='dropdown__item'>Office of the President</li></Link>
+                    <Link href={"/administrations/office-of-the-vice-president-for-academic-affairs"}><li className='dropdown__item'>Office of the Vice President for Academic Affairs</li></Link>
+                    <Link href={"/administrations/office-of-the-vice-president-for-administration-and-finance"}><li className='dropdown__item '>Office of the Vice President for Administration and Finance</li></Link>
+                </ul>
+            </li>
 
-            <li><Link className='link' href={"/about"}>About</Link></li>
+            <Link href={"/programs"}><li className='menu__item'>Programs</li></Link>
+
+            <Link href={"/about"}><li className='menu__item'>About</li></Link>
         </ul>
-    </nav>
+    </header>
   )
 }
+

@@ -29,12 +29,16 @@ p {
     @apply text-base font-normal
 }
 
+input {
+    @apply focus:outline-none
+}
+
 .row {
     @apply border-b-2  flex items-center justify-between  p-3
 }
 
 .data {
-    @apply p-2  flex  justify-center w-full
+    @apply flex  justify-center w-full
 }
 
 .paddingvr {
@@ -43,36 +47,29 @@ p {
 
 
 /* NAVBAR */
-.menu__bar {
-    @apply  text-white absolute w-full px-[160px] pt-12 hidden md:block
+.menu {
+    @apply flex justify-between items-center;
 }
 
-
-.link {
-    @apply text-lg font-medium hover:text-[#FEFE00]
+.menu .menu__item {
+    @apply hover:text-[#FFE714] relative text-lg;
 }
 
-.menu__bar ul li {
-    padding: 10px 30px;
-    position: relative;
+.menu .dropdown__menu {
+    @apply hidden absolute left-0 top-full bg-white p-2  flex-col gap-2;
 }
 
-.dropdown__menu {
-@apply hidden absolute left-0 top-full bg-white text-black
+.menu .menu__item:hover .dropdown__menu {
+    @apply block;
 }
 
-.dropdown__menu li .link:hover {
-     @apply text-[#044721]
+.dropdown__menu .dropdown__item {
+    @apply text-base text-[#044721] p-1
 }
 
-.dropdown__menu ul {
-    @apply block m-3
+.dropdown__menu .dropdown__item:hover {
+    @apply bg-[#044721] bg-opacity-25
 }
-
-.menu__bar ul li:hover .dropdown__menu {
-    @apply block
-}
-
 
 .hero-section {
     background-image: url('../public/images/prrc-building.jpeg');
@@ -134,3 +131,6 @@ p {
     transform: translateY(-10px);
     transition: opacity 300ms, transform 300ms;
   } */
+
+
+  

@@ -1,28 +1,35 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from 'react';
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { announcements } from '@/sample/data'
+import { announcements } from '@/sample/data';
 import Image from 'next/image';
+import Link from 'next/link';
+
 export default function SwiperAnnouncement() {
   return (
     <Swiper
-        navigation
-        pagination={{ type: "bullets", clickable: true }}
-        autoplay={{ delay: 10000, disableOnInteraction: false }}
-        loop={true}
-        modules={[Autoplay, Navigation, Pagination]}
-        className='w-full h-[250px] md:h-[500px] shadow rounded-lg'
+      navigation
+      pagination={{ type: "bullets", clickable: true }}
+      autoplay={{ delay: 10000, disableOnInteraction: false }}
+      loop={true}
+      modules={[Autoplay, Navigation, Pagination]}
+      className='w-full h-[250px] md:h-[500px] shadow rounded-lg'
     >
-        {announcements.map((data) => (
-        <SwiperSlide key={data.id} className='w-full flex justify-center items-center'>
-            <Image src={data.image} alt={data.title} objectFit='cover' layout='fill'/>
+      {announcements.map((data) => (
+        <SwiperSlide key={data.id} className='w-full flex justify-center items-center relative'>
+          <Link href={{
+            pathname: `/announcement/${data.id}`,
+            query: { title: data.title, image: data.image, description: data.description, date: data.date }
+          }}>
+              <Image src={data.image} alt={data.title} layout='fill' objectFit='cover' />        
+          </Link>
         </SwiperSlide>
-        ))}
+      ))}
     </Swiper>
-  )
+  );
 }

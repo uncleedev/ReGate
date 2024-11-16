@@ -69,7 +69,7 @@ export const news = [
 export const announcements = [
     {
         id: 1,
-        title: 'hello',
+        title: 'hifgff fffgfg',
         description: 'This is a description of announcement 1',
         date: '2022-01-01',
         image: require("@/public/images/news.png")

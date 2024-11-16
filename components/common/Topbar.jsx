@@ -2,29 +2,68 @@
 
 import { useTheme } from '@/context/ThemeContext';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Colors } from '@/constants/colors';
+import { useRouter } from 'next/navigation';
 
-export default function Topbar({heading}) {
-  const { isDarkMode, toggleTheme } = useTheme(); 
+export default function Topbar({ heading, onClick }) {
+
+  const router = useRouter()
+
+  const { isDarkMode, toggleTheme } = useTheme();
+  const [isLogout, setIsLogout] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsLogout(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleLogoutDropdown = () => {
+    setIsLogout(prev => !prev);
+  };
 
   return (
-    <div className={`w-full flex justify-between items-center p-6 shadow-md ${isDarkMode ? `bg-[${Colors.background[1]}]` : 'bg-white'}`}>
-      <h2 className={`${isDarkMode ? 'text-white' : 'text-black'}`}>{heading}</h2>
+    <>
+      <div className={`w-full relative flex justify-between items-center p-6 shadow-md ${isDarkMode ? `bg-[${Colors.background[1]}]` : 'bg-white'}`}>
+        <h2 className={`${isDarkMode ? 'text-white' : 'text-black'}`}>{heading}</h2>
 
-      <div className='flex items-center gap-4'>
-        <button onClick={toggleTheme} className='flex items-center'>
-          {/* Show moon icon if in light mode, otherwise show light icon */}
-          {isDarkMode ? (
-            <Image src={require("@/public/icons/light.png")} width={24} height={24} alt="Light Mode" />
-          ) : (
-            <Image src={require("@/public/icons/moon.png")} width={24} height={24} alt="Dark Mode" />
-          )}
-        </button>
-        <h3 className={`${isDarkMode ? 'text-white' : 'text-black'}`}>22-01383</h3>
-        <Image src={require("@/public/images/avatar.png")} height={40} width={40} alt="Avatar" />
-        {/* <svg className='w-6 h-6 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg> */}
+        <div className='flex items-center gap-4'>
+          <button onClick={toggleTheme} className='flex items-center'>
+            {isDarkMode ? (
+              <Image src={require("@/public/icons/light.png")} width={24} height={24} alt="Light Mode" />
+            ) : (
+              <Image src={require("@/public/icons/moon.png")} width={24} height={24} alt="Dark Mode" />
+            )}
+          </button>
+          <h3 className={`${isDarkMode ? 'text-white' : 'text-black'}`}>22-01383</h3>
+          <Image 
+            src={require("@/public/images/avatar.png")} 
+            onClick={toggleLogoutDropdown} 
+            height={40} 
+            width={40} 
+            alt="Avatar" 
+          />
+        </div>
+        {isLogout && (
+          <div 
+            ref={dropdownRef} 
+            className={`${isDarkMode ?  `bg-[${Colors.background[1]}]` : `bg-white`} p-3 absolute right-[24px] top-[100px] shadow-md flex flex-col gap-2`}
+          >
+            <p>arce.jhonbrian@gmail.com</p>
+            <button className='p-2 bg-red-600 text-white rounded w-full' onClick={onClick}>Logout</button>
+          </div>
+        )}
       </div>
-    </div>
+    </>
   );
 }
