@@ -29,7 +29,8 @@ export default function Footer() {
             </div>
         
         </div>
-        <h6 className='text-center text-sm font-semibold'>2024 © Copyright <br /> Managed and maintained by CDMMIS</h6>
+        <h6 className='text-[12px] text-center'>2024 © Copyright <br />
+        Managed and maintained by CDMMIS</h6>
     </footer>
   )
 }

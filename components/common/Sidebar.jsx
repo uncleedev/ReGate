@@ -11,11 +11,16 @@ export default function Sidebar({menu}) {
     
 
   return (
-    <div className="col-span-1 h-full shadow-md p-6 flex flex-col gap-3">
+    <div className="col-span-1 h-full shadow-md p-6 flex flex-col justify-between">
         
-        {menu.map((item) => (
-            <CustomButton key={item.name} icon={item.icon} title={item.name} onClick={() => router.push(item.link)} cmStyle={`${pathname === item.link ? `text-white bg-[${Colors.primary}]` : ""}`} />
-        ))}
+        <div className='flex flex-col gap-3'>
+          {menu.map((item) => (
+              <CustomButton key={item.name} icon={item.icon} title={item.name} onClick={() => router.push(item.link)} cmStyle={`${pathname === item.link ? `text-white bg-[${Colors.primary}]` : ""}`} />
+          ))}
+        </div>
+
+        <h6 className='text-[12px] text-center'>2024 © Copyright <br />
+        Managed and maintained by CDMMIS</h6>
     </div>
   )
 }
