@@ -63,43 +63,43 @@ export const Programs = [
                 semester: "2nd Semester",
                 courses: [
                     {
-                        course_code: "CCITCOM",
+                        course_code: "To be Announced",
                         course_name: "Discrete Structures",
                         credits: 3
                         
                     },
                     {
-                        course_code: "CCPROG1",
+                        course_code: "To be Announced",
                         course_name: "Computer Programming 2			",
                         credits: 3
                         
                     },
                     {
-                        course_code: "HISTORY",
+                        course_code: "To be Announced",
                         course_name: "Purposive Communication			",
                         credits: 3
                         
                     },
                     {
-                        course_code: "MATWRLD",
+                        course_code: "To be Announced",
                         course_name: "Art Appreciation",
                         credits: 3
                         
                     },
                     {
-                        course_code: "UNDSELF",
+                        course_code: "To be Announced",
                         course_name: "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
                         credits: 3
                         
                     },
                     {
-                        course_code: "GENDSOC",
+                        course_code: "To be Announced",
                         course_name: "Living in IT era",
                         credits: 3
                         
                     },
                     {
-                        course_code: "PAHFIT 1",
+                        course_code: "To be Announced",
                         course_name: "Rhythmic Activities",
                         credits: 3
                         
@@ -179,49 +179,49 @@ export const Programs = [
                 semester: "2nd Semester",
                 courses: [
                     {
-                        course_code: "CCITCOM",
+                        course_code: "To be Announced",
                         course_name: "Advanced Computer System Servicing",
                         credits: 3
                         
                     },
                     {
-                        course_code: "CCPROG1",
+                        course_code: "To be Announced",
                         course_name: "IT Elective 2 (Object-Oriented Programming)",
                         credits: 3
                         
                     },
                     {
-                        course_code: "HISTORY",
+                        course_code: "To be Announced",
                         course_name: "Networking 1",
                         credits: 3
                         
                     },
                     {
-                        course_code: "MATWRLD",
+                        course_code: "To be Announced",
                         course_name: "Ethics",
                         credits: 3
                         
                     },
                     {
-                        course_code: "UNDSELF",
+                        course_code: "To be Announced",
                         course_name: "Fundamentals of Databse Systems",
                         credits: 3
                         
                     },
                     {
-                        course_code: "GENDSOC",
+                        course_code: "To be Announced",
                         course_name: "System Software Design",
                         credits: 3
                         
                     },
                     {
-                        course_code: "PAHFIT 1",
+                        course_code: "To be Announced",
                         course_name: "Integrative Programming and Technologies 1",
                         credits: 3
                         
                     },
                     {
-                        course_code: "ITELECTNSTP 1 ",
+                        course_code: "To be Announced",
                         course_name: "Team Sports and Recreations",
                         credits: 3
                         
@@ -295,37 +295,37 @@ export const Programs = [
                 semester: "2nd Semester",
                 courses: [
                     {
-                        course_code: "CCITCOM",
+                        course_code: "To be Announced",
                         course_name: "The life and Works of Jose Rizal",
                         credits: 3
                         
                     },
                     {
-                        course_code: "CCPROG1",
+                        course_code: "To be Announced",
                         course_name: "Capstone 1 ",
                         credits: 3
                         
                     },
                     {
-                        course_code: "HISTORY",
+                        course_code: "To be Announced",
                         course_name: "Data Warehousing and Data Mining",
                         credits: 3
                         
                     },
                     {
-                        course_code: "MATWRLD",
+                        course_code: "To be Announced",
                         course_name: "Quantitative Methods",
                         credits: 3
                         
                     },
                     {
-                        course_code: "UNDSELF",
+                        course_code: "To be Announced",
                         course_name: "System Administration and Maintenance",
                         credits: 3
                         
                     },
                     {
-                        course_code: "GENDSOC",
+                        course_code: "To be Announced",
                         course_name: "Information Assurance and Security 2",
                         credits: 3
                         
@@ -1245,5 +1245,6 @@ export const Programs = [
             }
             
         ]
-    }
+    },
+    
 ]
