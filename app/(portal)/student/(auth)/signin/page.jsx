@@ -2,15 +2,55 @@
 
 import AuthLayout from '@/components/portal/AuthLayout'
 import { Colors } from '@/constants/colors'
+import { signIn } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation';
+import { useRouter, redirect } from 'next/navigation';
 import React, { useState } from 'react'
 import { HiEye, HiEyeOff } from 'react-icons/hi';
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
-export default function StudentSignInPage() {
+export default async function StudentSignInPage() {
+
+  const session = await getServerSession(authOptions)
+
+  if (session) redirect("/student/dashboard")
 
   const router = useRouter()
+
+  const [studentNo, setStudentNo] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+
+
+  const signin =  async (e) => {
+
+    e.preventDefault()
+
+    if (studentNo == "" || email == "" || password == "") {
+      setError("Please fill in all fields")
+    }
+
+    try {
+      const res = await signIn("credentials", {
+        studentNo,
+        email, 
+        password,
+        redirect: false
+      })
+
+      if (res.error) {
+        setError("Invalid Credentials!")
+        return
+      }
+
+      router.push("/student/dashboard")
+    } catch (error) {
+      console.log("Error: ", error)
+    }
+  }
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -24,16 +64,27 @@ export default function StudentSignInPage() {
         <div className='col-span-1 w-full flex flex-col items-center gap-12 p-24'>
           <h2 className=''>Sign-in to your account</h2>
 
-          <form action="" className='w-full flex flex-col gap-6'>
+          <form onSubmit={signin} className='w-full flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-4'>
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Student No. :</label>
-                <input className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' type="text" />
+                <input 
+                  className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' 
+                  type="text" 
+                  value={studentNo}
+                  onChange={(e) => setStudentNo(e.target.value)}
+                />
+                  
               </div>
 
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Email :</label>
-                <input className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' type="email" />
+                <input 
+                  className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' 
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} 
+                />
               </div>
 
               <div className='flex flex-col gap-2'>
@@ -41,7 +92,9 @@ export default function StudentSignInPage() {
                 <div className='relative'>
                   <input 
                     className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg w-full' 
-                    type={showPassword ? "text" : "password"} 
+                    type={showPassword ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)} 
                   />
                   <span 
                     onClick={togglePasswordVisibility} 
@@ -55,14 +108,11 @@ export default function StudentSignInPage() {
 
             <div className='flex flex-col gap-2 justify-center'>
               <button className='place-self-end text-red-600'>Forget Password?</button>
-              <p className='text-red-600'>Error message</p>
+              {error && (
+                <p className='text-red-600'>{error}</p>
+              )}
               <button 
-                className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`} 
-                onClick={(e) => {
-                  e.preventDefault(); // Prevent the default form submission
-                  router.replace("/student/dashboard")
-                }}
-              >
+                className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`}>
                 Sign In
               </button>
               <span className='place-self-center'>Don't have an Account? <Link href="/student/signup" className={`text-[${Colors.primary}]`}>Sign up</Link></span>

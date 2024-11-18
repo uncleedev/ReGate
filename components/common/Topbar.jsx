@@ -6,7 +6,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Colors } from '@/constants/colors';
 import { useRouter } from 'next/navigation';
 
-export default function Topbar({ heading, onClick }) {
+export default function Topbar({ heading, onClick, email, id }) {
 
   const router = useRouter()
 
@@ -45,7 +45,7 @@ export default function Topbar({ heading, onClick }) {
               <Image src={require("@/public/icons/moon.png")} width={24} height={24} alt="Dark Mode" />
             )}
           </button>
-          <h3 className={`${isDarkMode ? 'text-white' : 'text-black'}`}>22-01383</h3>
+          <h3 className={`${isDarkMode ? 'text-white' : 'text-black'}`}>{id}</h3>
           <Image 
             src={require("@/public/images/avatar.png")} 
             onClick={toggleLogoutDropdown} 
@@ -59,7 +59,7 @@ export default function Topbar({ heading, onClick }) {
             ref={dropdownRef} 
             className={`${isDarkMode ?  `bg-[${Colors.background[1]}]` : `bg-white`} p-3 absolute right-[24px] top-[100px] shadow-md flex flex-col gap-2`}
           >
-            <p>arce.jhonbrian@gmail.com</p>
+            <p>{email}</p>
             <button className='p-2 bg-red-600 text-white rounded w-full' onClick={onClick}>Logout</button>
           </div>
         )}

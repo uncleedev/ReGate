@@ -6,8 +6,8 @@ import React, { useEffect, useState } from 'react';
 import { ThemeProvider, useTheme } from '@/context/ThemeContext';
 import Sidebar from '@/components/common/Sidebar';
 import { StudentMenu } from '@/constants/navigation';
-import Modal from '@/components/common/Modal';
 import { useRouter } from 'next/navigation';
+import { signOut, useSession } from 'next-auth/react';
 
 export default function StudentLayout({ children }) {
   return (
@@ -23,10 +23,12 @@ const InnerLayout = ({ children }) => {
   const { isDarkMode } = useTheme(); 
   const router = useRouter()
 
+  const { data: session } = useSession()
+
   return (
     <>
       <div className={`h-screen overflow-hidden ${isDarkMode ? `bg-[#282828] text-white` : 'bg-white text-black'}`}>
-        <Topbar heading={"Student Portal"} onClick={() => router.replace("/student/signin")}/>
+        <Topbar heading={"Student Portal"} onClick={() => signOut()} email={session?.student?.email} id={session?.student?.studentNo}/>
         <div className="h-[calc(100%-84px)] grid grid-cols-5">
           <Sidebar menu={StudentMenu}/>
           <div className={`col-span-4 overflow-auto ${isDarkMode ? `bg-[#121212] text-white` : 'bg-[#f1f1f1] text-black'} p-6 flex flex-col gap-6 overflow-hidden`}>

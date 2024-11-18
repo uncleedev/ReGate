@@ -1,6 +1,5 @@
 "use client"
 
-import AuthLayout from '@/components/portal/AuthLayout'
 import { Colors } from '@/constants/colors'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,6 +10,11 @@ import { HiEye, HiEyeOff } from 'react-icons/hi';
 export default function InstructorSignInPage() {
 
   const router = useRouter()
+
+  const [instructorNo, setInstructorNo] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -55,7 +59,9 @@ export default function InstructorSignInPage() {
 
             <div className='flex flex-col gap-2 justify-center'>
               <button className='place-self-end text-red-600'>Forget Password?</button>
-              <p className='text-red-600'>Error message</p>
+              {error && (
+                <p className='text-red-600'>Error message</p>
+              )}
               <button 
                 className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`}
                 onClick={(e) => {

@@ -11,6 +11,12 @@ export default function InstructorSignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+
+  const [instructorNo, setInstructorNo] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -75,7 +81,9 @@ export default function InstructorSignUpPage() {
             </div>
 
             <div className='flex flex-col gap-2 justify-center'>
-              <p className='text-red-600'>Error message</p>
+              {error && (
+                <p className='text-red-600'>Error message</p>
+              )}
               <button className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`}>Sign Up</button>
               <span className='place-self-center'>Already have an Account? <Link href="/instructor/signin" className={`text-[${Colors.primary}]`}>Sign in</Link></span>
             </div>

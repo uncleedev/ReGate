@@ -12,6 +12,73 @@ export default function StudentSignUpPage() {
 
   const router = useRouter()
 
+  
+  const [studentNo, setStudentNo] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [error, setError] = useState("")
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+
+    if (studentNo === "" || email === "" || password === "" || confirmPassword === "") {
+        setError("Please fill in all fields");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        setError("Passwords do not match");
+        return;
+    }
+
+    try {
+        const studentExists = await fetch("/api/student-exists", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ studentNo, email })
+        });
+
+        const { student } = await studentExists.json();
+
+        if (student) {
+            if (student.studentNo === studentNo) {
+                setError("Student No. is already registered!");
+                return;
+            }
+
+            if (student.email === email) {
+                setError("Email is already registered!");
+                return;
+            }
+        }
+
+        const res = await fetch("/api/student-signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                studentNo, email, password
+            })
+        });
+
+        if (res.ok) {
+            setStudentNo("");
+            setEmail("");
+            setPassword("");
+            setConfirmPassword("");
+            setError("")
+        }
+
+    } catch (error) {
+        console.log("Error during registration: ", error);
+        setError("An error occurred during registration.");
+    }
+};
+
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -33,16 +100,26 @@ export default function StudentSignUpPage() {
         <div className='col-span-1 w-full flex flex-col items-center gap-12 p-24'>
           <h2 className=''>Sign-up to your account</h2>
 
-          <form action="" className='w-full flex flex-col gap-6'>
+          <form onSubmit={handleSignup} className='w-full flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-4'>
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Student No. :</label>
-                <input className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' type="text" />
+                <input 
+                  className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' 
+                  type="text" 
+                  value={studentNo} 
+                  onChange={(e) => setStudentNo(e.target.value)} 
+                />
               </div>
 
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Email :</label>
-                <input className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' type="email" />
+                <input 
+                  className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} 
+                />
               </div>
 
               <div className='flex flex-col gap-2'>
@@ -51,6 +128,8 @@ export default function StudentSignUpPage() {
                   <input 
                     className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg w-full' 
                     type={showPassword ? "text" : "password"} 
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                   <span 
                     onClick={togglePasswordVisibility} 
@@ -67,6 +146,8 @@ export default function StudentSignUpPage() {
                   <input 
                     className='p-2 rounded-lg shadow shadow-black focus:outline-[#FFE714] w-full' 
                     type={showConfirmPassword ? "text" : "password"} 
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                   <span 
                     onClick={toggleConfirmPasswordVisibility} 
@@ -79,8 +160,11 @@ export default function StudentSignUpPage() {
             </div>
 
             <div className='flex flex-col gap-2 justify-center'>
-              <p className='text-red-600'>Error message</p>
-              <button className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`} onClick={() => router.replace("/student/dashboard")}>Sign Up</button>
+              {error && (
+
+                <p className='text-red-600'>{error}</p>
+              )}
+              <button className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`}>Sign Up</button>
               <span className='place-self-center'>Already have an Account? <Link href="/student/signin" className={`text-[${Colors.primary}]`}>Sign in</Link></span>
             </div>
           </form>
