@@ -1,0 +1,23 @@
+import mongoose, { models, Schema } from "mongoose";
+
+const instructorSchema = new Schema({
+    instructorNo: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    password: { 
+        type: String,
+        required: true
+    }
+}, { timestamps: true })
+
+
+const Instructor = models.Instructor || mongoose.model("Instructor", instructorSchemaSchema)
+
+export default Student

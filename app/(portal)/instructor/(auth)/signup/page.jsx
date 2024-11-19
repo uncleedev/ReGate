@@ -15,7 +15,67 @@ export default function InstructorSignUpPage() {
   const [instructorNo, setInstructorNo] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
+
+
+  const handleSignup = async (e) => {
+    e.preventDefault()
+
+    if (instructorNo === "" || email === "" || password === "" || confirmPassword === "") {
+      setError("Please fill in all fields")
+      return
+    }
+
+    if (password !== confirmPassword ) {
+      setError("Password does not match")
+      return
+    }
+
+    try {
+      const instructorExists = await fetch("/api/instructor-exists", {
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({ instructorNo, email })
+      })
+
+      const { instructor } = await instructorExists.json()
+
+      if (instructor) {
+        if (instructor.instructorNo === instructorNo) {
+          setError("Instructor No. is already registered.")
+          return
+        }
+
+        if (instructor.email === email) {
+          setError("Email is already registerd")
+          return
+        }
+      }
+
+      const res = await fetch("/api/instructor-signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          instructorNo, email, password
+        })
+      })
+
+      if (res.ok) {
+        setInstructorNo("")
+        setEmail("")
+        setPassword("")
+        setConfirmPassword("")
+        setError("")
+      }
+    } catch (error) {
+      console.log("Error during registration: ", error);
+    }
+  }
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -35,7 +95,7 @@ export default function InstructorSignUpPage() {
         <div className='col-span-1 w-full flex flex-col items-center gap-12 p-24'>
           <h2 className=''>Sign-up to your account</h2>
 
-          <form action="" className='w-full flex flex-col gap-6'>
+          <form onSubmit={handleSignup} className='w-full flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-4'>
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Student No. :</label>

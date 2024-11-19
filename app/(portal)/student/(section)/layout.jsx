@@ -28,7 +28,7 @@ const InnerLayout = ({ children }) => {
   return (
     <>
       <div className={`h-screen overflow-hidden ${isDarkMode ? `bg-[#282828] text-white` : 'bg-white text-black'}`}>
-        <Topbar heading={"Student Portal"} onClick={() => signOut()} email={session?.student?.email} id={session?.student?.studentNo}/>
+        <Topbar heading={"Student Portal"} onClick={() => signOut()} email={`${session?.user?.email}`} id={session?.user?.studentNo}/>
         <div className="h-[calc(100%-84px)] grid grid-cols-5">
           <Sidebar menu={StudentMenu}/>
           <div className={`col-span-4 overflow-auto ${isDarkMode ? `bg-[#121212] text-white` : 'bg-[#f1f1f1] text-black'} p-6 flex flex-col gap-6 overflow-hidden`}>
