@@ -18,6 +18,6 @@ const instructorSchema = new Schema({
 }, { timestamps: true })
 
 
-const Instructor = models.Instructor || mongoose.model("Instructor", instructorSchemaSchema)
+const Instructor = models.Instructor || mongoose.model("Instructor", instructorSchema)
 
-export default Student
+export default Instructor

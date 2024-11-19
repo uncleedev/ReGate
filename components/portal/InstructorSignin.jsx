@@ -56,7 +56,7 @@ export default function InstructorSignin() {
         <div className='col-span-1 w-full flex flex-col items-center gap-12 p-24'>
           <h2 className=''>Sign-in to your account</h2>
 
-          <form onSubmit={signIn} className='w-full flex flex-col gap-6'>
+          <form onSubmit={handleSignin} className='w-full flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-4'>
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Instructor No. :</label>
@@ -100,7 +100,7 @@ export default function InstructorSignin() {
             <div className='flex flex-col gap-2 justify-center'>
               <button className='place-self-end text-red-600'>Forget Password?</button>
               {error && (
-                <p className='text-red-600'>Error message</p>
+                <p className='text-red-600'>{error}</p>
               )}
               <button 
                 className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`}

@@ -23,13 +23,13 @@ export default function StudentSignUpPage() {
     e.preventDefault();
 
     if (studentNo === "" || email === "" || password === "" || confirmPassword === "") {
-        setError("Please fill in all fields");
-        return;
+      setError("Please fill in all fields");
+      return;
     }
 
     if (password !== confirmPassword) {
-        setError("Passwords do not match");
-        return;
+      setError("Passwords do not match");
+      return;
     }
 
     try {
