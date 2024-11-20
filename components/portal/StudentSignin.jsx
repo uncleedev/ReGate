@@ -8,6 +8,7 @@ import { useRouter, redirect } from 'next/navigation';
 import React, { useState } from 'react'
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 
+
 export default function StudentSignin() {
 
 
@@ -19,7 +20,7 @@ export default function StudentSignin() {
     const [error, setError] = useState("")
 
 
-    const signin =  async (e) => {
+    const handlesignin =  async (e) => {
 
         e.preventDefault()
 
@@ -29,7 +30,7 @@ export default function StudentSignin() {
         }
 
         try {
-          const res = await signIn("credentials", {
+          const res = await signIn("credential", {
             studentNo,
             email, 
             password,
@@ -59,7 +60,7 @@ export default function StudentSignin() {
         <div className='col-span-1 w-full flex flex-col items-center gap-12 p-24'>
           <h2 className=''>Sign-in to your account</h2>
 
-          <form onSubmit={signin} className='w-full flex flex-col gap-6'>
+          <form onSubmit={handlesignin} className='w-full flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-4'>
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Student No. :</label>

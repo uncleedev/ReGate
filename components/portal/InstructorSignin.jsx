@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import { HiEye, HiEyeOff } from 'react-icons/hi';
+import { signIn } from 'next-auth/react'
 
 export default function InstructorSignin() {
 
@@ -26,12 +27,14 @@ export default function InstructorSignin() {
         }
 
         try {
-            const res = await signIn("credentials", {
+            const res = await signIn("credential", {
                 instructorNo,
                 email,
                 password,
                 redirect: false
             })
+
+            console.log(res)
 
             if (res.error) {
                 setError("Invalid Credentials")
@@ -40,7 +43,7 @@ export default function InstructorSignin() {
 
             router.push("/instructor/dashboard")
         } catch (error) {
-            
+          console.error("Sign-in error:", error);
         }
     }
 

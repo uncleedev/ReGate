@@ -42,7 +42,6 @@ export const authOptions = {
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
         signIn: "/student/signin",
-        instructorSignin: "/instructor/signin"
     }
 }
 
