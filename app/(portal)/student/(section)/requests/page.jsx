@@ -4,7 +4,7 @@ import Modal from '@/components/common/Modal';
 import { Colors } from '@/constants/colors';
 import { useTheme } from '@/context/ThemeContext'
 import Image from 'next/image'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { requests } from '@/sample/data';
 import { forms } from '@/constants/forms';
 
@@ -52,6 +52,7 @@ export default function StudentRequestPage() {
 
   const currentItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   
+
 
   return (
     <>

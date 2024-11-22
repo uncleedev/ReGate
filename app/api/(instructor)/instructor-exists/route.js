@@ -7,7 +7,7 @@ export async function POST(req) {
         await connectMongoDB();
 
         const { instructorNo, email } = await req.json();
-        const instructor = await Student.findOne({
+        const instructor = await Instructor.findOne({
             $or: [{ instructorNo }, { email }]
         }).select("_id instructorNo email");
 

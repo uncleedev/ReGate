@@ -56,6 +56,15 @@ export default function AdminNewsEventsPage() {
   );
 
   const currentItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+
+  const [headline, setHeadline] = useState("")
+  const [caption, setCaption] = useState("")
+  const [date, setDate] = useState()
+  const [image, setImage] = useState("hi")
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+
   
   // FUNCTIONS
   const handleEdit = (item) => {
@@ -79,15 +88,41 @@ export default function AdminNewsEventsPage() {
     setBackgroundImage('');
   };
 
-  const handleCloseEditModal = () => {
+  const handleCloseEditModal = () => { 
     setShowEditModal(false);
     setBackgroundImage('');
   };
 
-  const handleSubmitCreate = (e) => {
+  const handleSubmitCreate = async (e) => {
     e.preventDefault();
-    // Logic to handle create submission
-    handleCloseCreateModal(); 
+    setLoading(true)
+    checkInput()
+
+    try {
+      const res = await fetch("/api/news-events", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          headline, caption, image
+        })
+      })
+
+      if (res.ok) {
+        setHeadline("")
+        setCaption("")
+        setDate(null)
+        setImage("")
+        setError("")
+        setLoading(false)
+        
+        setShowCreateModal(false)
+        setBackgroundImage("")
+      }
+    } catch (error) {
+      
+    }
   };
 
   const handleSubmitEdit = (e) => {
@@ -95,6 +130,16 @@ export default function AdminNewsEventsPage() {
     // Logic to handle edit submission
     handleCloseEditModal(); 
   };
+
+  const checkInput = () => {
+    if (headline === "" || caption === "" || image === "") {
+      setError("fill all fields!")
+      setLoading(false)
+      return
+    }
+  }
+
+
 
   return (
     <>
@@ -165,16 +210,40 @@ export default function AdminNewsEventsPage() {
       <Modal isOpen={showCreateModal} onClose={handleCloseCreateModal} title={"Create new News or Events"}>
         <form className='flex flex-col gap-4' onSubmit={handleSubmitCreate}>
           <div style={styles.group}>
-            <label style={styles.label} htmlFor="">Title</label>
-            <input style={styles.input} type="text" />
+            <label style={styles.label} htmlFor="">Headline</label>
+            <input 
+              style={styles.input} 
+              type="text"
+              value={headline}
+              onChange={(e) => {
+                setHeadline(e.target.value)
+                setError("")
+              }} 
+            />
           </div>
           <div style={styles.group}>
-            <label style={styles.label} htmlFor="">Description</label>
-            <textarea style={styles.input} name="" id=""></textarea>
+            <label style={styles.label} htmlFor="">Caption</label>
+            <textarea 
+              style={styles.input}
+              value={caption}
+              onChange={(e) => {
+                setCaption(e.target.value)
+                setError("")
+              }} 
+            />
           </div>
           <div style={styles.group}>
             <label style={styles.label} htmlFor="">Date</label>
-            <input style={styles.input} type="date" name="" id="" />
+            <input 
+              style={styles.input} 
+              type="date"
+              value={date}
+              onChange={(e) => {
+                setDate(e.target.value)
+                setError("")
+              }}
+            
+            />
           </div>
           <div style={styles.group}>
             <label style={styles.label} htmlFor="">Image</label>
@@ -182,8 +251,7 @@ export default function AdminNewsEventsPage() {
               <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg className="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
- </svg>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/></svg>
                   <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
                   <p className="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                 </div>
@@ -191,9 +259,13 @@ export default function AdminNewsEventsPage() {
               </label>
             </div>
           </div>
+
+          {error && (
+            <p className='text-red-600'>{error}</p>
+          )}
           <div className='flex items-center justify-between gap-3'>
             <button type="button" onClick={handleCloseCreateModal} style={styles.button} className='bg-red-600'>Cancel</button>
-            <button type="submit" style={styles.button} className='bg-blue-600'>Submit</button>
+            <button type="submit" style={styles.button} className='bg-blue-600'>{loading ? "Loading..." : "Submit"}</button>
           </div>
         </form>
       </Modal>

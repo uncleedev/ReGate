@@ -1,0 +1,17 @@
+{
+    "schedules": [
+        {
+            "schedule_id" : "14",
+            "room_no": "102",
+            "course_code": "APPSDEV",
+            "course_name": "Application dev",
+            "section": "BSIT 3C",
+            "instructor_name": "ello",
+            "class_day": ["Mon, Tue, Wed"],
+            "time" : {
+                "start_time": "9:00am",
+                "end_time": "10:00am"
+            } 
+        }
+    ]
+}

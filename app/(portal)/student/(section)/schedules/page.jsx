@@ -4,14 +4,36 @@ import CardSchedule from '@/components/portal/CardSchedule'
 import { Colors } from '@/constants/colors'
 import { useTheme } from '@/context/ThemeContext'
 import Image from 'next/image'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 export default function StudentSchedulePage() {
 
   const {isDarkMode} = useTheme()
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [schedules, setSchedules] = useState([])
+  const [mySchedules, setMySchedules] = useState([])
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("http://localhost:3002/schedules", {
+        method: "GET",
+        headers: {
+          "Content-Type" : "application/json"
+        }
+      })
+
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await res.json()
+      setSchedules(data)
+
+    }
+
+    fetchData()
+  }, [])
 
   return (
     <div className='flex flex-col gap-4 h-full w-full'>
@@ -57,14 +79,16 @@ export default function StudentSchedulePage() {
                 </tr>
               </thead>
               <tbody className='w-full flex flex-col items-center justify-center'>
-                <tr className='row w-full'>
-                  <td className='data items-center'>1</td>
-                  <td className='data items-center'>1</td>
-                  <td className='data items-center'>1</td>
-                  <td className='data items-center'>1</td>
-                  <td className='data items-center'>1</td>
-                  <td className='data items-center'>1</td>
-                </tr>
+                {schedules.map((schedule) => (
+                  <tr className='row w-full'>
+                    <td className='data items-center'>{schedule.room_no}</td>
+                    <td className='data items-center'>{schedule.course_code}</td>
+                    <td className='data items-center'>{schedule.section}</td>
+                    <td className='data items-center'>{schedule.instructor_name}</td>
+                    <td className='data items-center'>{schedule.class_day.join(',')}</td>
+                    <td className='data items-center'>{schedule.time.start_time} - {schedule.time.end_time}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

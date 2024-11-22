@@ -1,7 +1,7 @@
 "use client"
 
-import AuthLayout from '@/components/portal/AuthLayout'
 import { Colors } from '@/constants/colors'
+import { signIn } from 'next-auth/react';
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
@@ -12,11 +12,47 @@ export default function AdminSignInPage() {
 
   const router = useRouter()
 
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  const handleSignin = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+
+    if (email === "" || password === "") {
+      setError("Please fill in all fields")
+      setLoading(false)
+      return
+    }
+
+    try {
+      const res = await signIn("admin-signin", {
+        email,
+        password,
+        redirect: false
+      })
+
+      if (res.error) {
+        setError("Invalid Credentials!");
+        setLoading(false);
+        return;
+      }
+
+      router.push("/admin/dashboard")
+    } catch (error) {
+      console.error("Sign-in error:", error);
+      setLoading(false);
+      return
+    }
+  }
 
   return (
     <div className="flex justify-center items-center p-24 w-full h-full bg-[#f1f1f1]">
@@ -24,12 +60,20 @@ export default function AdminSignInPage() {
         <div className='col-span-1 w-full flex flex-col items-center gap-12 p-24'>
           <h2 className=''>Sign-in to your account</h2>
 
-          <form action="" className='w-full flex flex-col gap-6'>
+          <form onSubmit={handleSignin} className='w-full flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-4'>
 
               <div className='flex flex-col gap-2'>
                 <label htmlFor="">Email :</label>
-                <input className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' type="email" />
+                <input 
+                  className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' 
+                  type="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value)
+                    setError("")
+                  }} 
+                />
               </div>
 
               <div className='flex flex-col gap-2'>
@@ -38,6 +82,11 @@ export default function AdminSignInPage() {
                   <input 
                     className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg w-full' 
                     type={showPassword ? "text" : "password"} 
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value)
+                      setError("")
+                    }}
                   />
                   <span 
                     onClick={togglePasswordVisibility} 
@@ -51,15 +100,14 @@ export default function AdminSignInPage() {
 
             <div className='flex flex-col gap-2 justify-center'>
               <button className='place-self-end text-red-600'>Forget Password?</button>
-              <p className='text-red-600'>Error message</p>
+              {error && (
+                <p className='text-red-600'>{error}</p> 
+              )}
               <button 
-                className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white bg-[${Colors.primary}]`} 
-                onClick={(e) => {
-                  e.preventDefault(); // Prevent the default form submission
-                  router.replace("/admin/dashboard")
-                }}
+                className={`w-full text-center font-semibold hover:border-[#FFE714] border-2 p-3 rounded-lg text-white  ${loading ? `bg-gray-400` : `bg-[${Colors.primary}]`}`} 
+                disabled={loading}
               >
-                Sign In
+                {loading ? "Loading..." : "Sign in"}
               </button>
             </div>
           </form>

@@ -27,7 +27,7 @@ export default function InstructorSignin() {
         }
 
         try {
-            const res = await signIn("credential", {
+            const res = await signIn("instructor-signin", {
                 instructorNo,
                 email,
                 password,
@@ -43,7 +43,7 @@ export default function InstructorSignin() {
 
             router.push("/instructor/dashboard")
         } catch (error) {
-          console.error("Sign-in error:", error);
+            console.error("Sign-in error:", error);
         }
     }
 
