@@ -38,14 +38,21 @@ export default function CssPage() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ab dolores veniam voluptatum in culpa autem nihil vitae, rerum corrupti.</p>
         </div>
         <div className='col-span-3 h-full border-black border-x border-t p-4 text-justify '>
-          <h3>Title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aperiam esse, corporis eum minus ipsa pariatur, harum hic inventore blanditiis voluptas dolorem, cum explicabo! Fugit voluptates, molestias placeat esse ipsam ab quaerat corrupti non rerum cupiditate fugiat tempore, quae id velit deserunt unde aliquid nihil adipisci necessitatibus. Voluptatibus dignissimos aliquid a, repellendus repellat veniam consequuntur ad fuga exercitationem? Nostrum aspernatur magnam labore. Sit, odio possimus adipisci veritatis laboriosam error velit numquam qui facilis facere? Expedita, rem nemo odio reiciendis quibusdam dolores voluptas nulla earum natus similique quisquam blanditiis aliquam illo eligendi tempore quod soluta? Suscipit magni eius voluptatibus sapiente velit.</p>
-          <br />
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aperiam esse, corporis eum minus ipsa pariatur, harum hic inventore blanditiis voluptas dolorem, cum explicabo! Fugit voluptates, molestias placeat esse ipsam ab quaerat corrupti non rerum cupiditate fugiat tempore, quae id velit deserunt unde aliquid nihil adipisci necessitatibus. Voluptatibus dignissimos aliquid a, repellendus repellat veniam consequuntur ad fuga exercitationem? Nostrum aspernatur magnam labore. Sit, odio possimus adipisci veritatis laboriosam error velit numquam qui facilis facere? Expedita, rem nemo odio reiciendis quibusdam dolores voluptas nulla earum natus similique quisquam blanditiis aliquam illo eligendi tempore quod soluta? Suscipit magni eius voluptatibus sapiente velit.</p>
-          <br />
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aperiam esse, corporis eum minus ipsa pariatur, harum hic inventore blanditiis voluptas dolorem, cum explicabo! Fugit voluptates, molestias placeat esse ipsam ab quaerat corrupti non rerum cupiditate fugiat tempore, quae id velit deserunt unde aliquid nihil adipisci necessitatibus. Voluptatibus dignissimos aliquid a, repellendus repellat veniam consequuntur ad fuga exercitationem? Nostrum aspernatur magnam labore. Sit, odio possimus adipisci veritatis laboriosam error velit numquam qui facilis facere? Expedita, rem nemo odio reiciendis quibusdam dolores voluptas nulla earum natus similique quisquam blanditiis aliquam illo eligendi tempore quod soluta? Suscipit magni eius voluptatibus sapiente velit.</p>
-          <br />
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aperiam esse, corporis eum minus ipsa pariatur, harum hic inventore blanditiis voluptas dolorem, cum explicabo! Fugit voluptates, molestias placeat esse ipsam ab quaerat corrupti non rerum cupiditate fugiat tempore, quae id velit deserunt unde aliquid nihil adipisci necessitatibus. Voluptatibus dignissimos aliquid a, repellendus repellat veniam consequuntur ad fuga exercitationem? Nostrum aspernatur magnam labore. Sit, odio possimus adipisci veritatis laboriosam error velit numquam qui facilis facere? Expedita, rem nemo odio reiciendis quibusdam dolores voluptas nulla earum natus similique quisquam blanditiis aliquam illo eligendi tempore quod soluta? Suscipit magni eius voluptatibus sapiente velit.</p>
+         <h3>Introduction</h3>
+         <p>Welcome to the ICS - Computer Students' Society, a vibrant community of students passionate about technology, programming, and innovation. Our society serves as a platform for students to collaborate, learn, and grow in the field of computer science and information technology. We aim to foster a supportive environment where members can share ideas, work on projects, and enhance their skills.</p>
+         <br />
+         <h3>Mission</h3>
+         <p>The mission of the ICS - Computer Students' Society is to promote interest in computer science and technology among students, provide opportunities for professional development, and encourage collaboration on projects and initiatives. We strive to create a community that inspires creativity, critical thinking, and a passion for technology.</p>
+         <br />
+         <h3>Officers</h3>
+         <p>The officers of the Computer Students' Society are dedicated leaders who work to represent the interests of our members and facilitate various activities and programs. Each officer plays a crucial role in governance, event organization, and member engagement.</p>
+         <br />
+         <h3>Committees</h3>
+         <p>Our society is supported by various committees that focus on specific areas of interest within computer science and technology. These committees work collaboratively to organize events, workshops, and projects that benefit our members and the broader community.</p>
+         <br />
+         <h3>Join Us</h3>
+         <p>We invite all students interested in computer science and technology to join the ICS - Computer Students' Society! Whether you are a beginner or an experienced programmer, your involvement can make a difference. Together, we can explore new technologies, collaborate on exciting projects, and build a strong network of future tech leaders.</p>
+         
         </div>
         <div className='col-span-1 border-t border-black p-4 text-justify'>
           <h2>Others</h2>
