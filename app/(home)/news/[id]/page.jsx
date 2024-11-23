@@ -1,13 +1,14 @@
 "use client";
 
-import NewsEvent from "@/models/news-events";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function NewsIdPage() {
-  const searchParams = useSearchParams();
   const [newsEvents, setNewsEvents] = useState([]);
+  const pathname = usePathname();
+
+  const newsId = pathname.split('/').pop();
 
   useEffect(() => {
     const fetchNewsEvents = async () => {
@@ -24,7 +25,6 @@ export default function NewsIdPage() {
         }
 
         const data = await res.json();
-        const newsId = searchParams.get('id')
 
         const news = data?.find(item => item._id === newsId);
 
@@ -32,33 +32,32 @@ export default function NewsIdPage() {
           throw new Error('News event not found');
         }
 
-        setNewsEvents(data);
+        setNewsEvents(news);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setNewsEvents(null); // Optionally reset state on error
+        setNewsEvents(null); 
       }
     };
 
     fetchNewsEvents();
-  }, [searchParams.get("id")]);
+  }, [newsId]); 
 
-  // if (!newsEvents) {
-  //   return <p>Loading...</p>; // Show a loading state while fetching data
-  // }
+  if (!newsEvents) {
+    return <p>Loading...</p>
+  }
 
   return (
     <div className="w-full">
-      <h2 className='mt-6'>{newsEvents.headline}</h2>
-      {/* <Image 
-        src={NewsEvent.image}
+      <Image 
+        src={newsEvents.image}
         height={520}
-        width={520}
+        width={520} 
         alt={newsEvents.headline}
-      /> */}
-      {/* // Add alt text for accessibility
+        className="w-full" 
       />
+      <h2 className='mt-6'>{newsEvents.headline}</h2>
       <h4 className="mt-2">{new Date(newsEvents.date).toLocaleDateString()}</h4> {/* Format date */}
-      {/*<p className="mt-4 text-justify">{newsEvents.caption}</p> */}
+      <p className="mt-4 text-justify">{newsEvents.caption}</p>
     </div>
   );
 }

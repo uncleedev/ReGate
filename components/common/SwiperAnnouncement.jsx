@@ -1,16 +1,47 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { announcements } from '@/sample/data';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function SwiperAnnouncement() {
+  const [announcements, setAnnouncements] = useState([]);
+  const [error, setError] = useState(null); 
+
+  useEffect(() => {
+    const fetchAnnouncement = async () => {
+      try {
+        const res = await fetch("/api/announcements", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await res.json();
+        setAnnouncements(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError("Failed to load announcements.");
+      }
+    };
+
+    fetchAnnouncement();
+  }, []);
+
+  if (error) {
+    return <div className="text-red-500">{error}</div>;
+  }
+
   return (
     <Swiper
       navigation
@@ -22,11 +53,14 @@ export default function SwiperAnnouncement() {
     >
       {announcements.map((data) => (
         <SwiperSlide key={data.id} className='w-full flex justify-center items-center relative'>
-          <Link href={{
-            pathname: `/announcement/${data.id}`,
-            query: { title: data.title, image: data.image, description: data.description, date: data.date }
-          }}>
-              <Image src={data.image} alt={data.title} layout='fill' objectFit='cover' />        
+          <Link href={`/announcement/${data._id}`}>
+            <Image 
+              src={data.image} 
+              alt={data.title} 
+              layout='fill' 
+              objectFit='cover' 
+              className='rounded-lg' 
+            />        
           </Link>
         </SwiperSlide>
       ))}

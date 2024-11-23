@@ -9,7 +9,7 @@ export default function NewsUpdateSection() {
   const [newsEvents, setNewsEvents] = useState([])
 
   useEffect(() => {
-    const fetchNewsEvens = async () => {
+    const fetchNewsEvents = async () => {
       try {
         const res = await fetch("/api/news-events", {
           method: "GET",
@@ -30,7 +30,7 @@ export default function NewsUpdateSection() {
       }
     }
 
-    fetchNewsEvens()
+    fetchNewsEvents()
   }, [])
 
   return (

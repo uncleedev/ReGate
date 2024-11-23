@@ -11,7 +11,7 @@ export default function CardNews({title, date, description, image, id}) {
   
     return (
     <div className='w-full  shadow-md rounded-[10px]'>
-        <Image  className='rounded-t-[10px]' src={require(`@/public/images/news.png`)} />
+        <Image  className='rounded-t-[10px] w-full h-[312px]' height={512} width={300} src={image} />
         <div className='w-full h-full flex flex-col p-4 gap-1'>
             <div className='w-full flex flex-col gap-2'>
                 <div>

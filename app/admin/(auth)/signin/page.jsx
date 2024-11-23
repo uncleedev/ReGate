@@ -111,6 +111,10 @@ export default function AdminSignInPage() {
               </button>
             </div>
           </form>
+
+          <span className='place-self-start'>
+            Go Back to <Link href="/" className={`text-[${Colors.primary}]`}>Homepage</Link>
+          </span>
         </div>
 
         <div className={`col-span-1 bg-[${Colors.primary}] flex justify-center items-center relative rounded-md`}>

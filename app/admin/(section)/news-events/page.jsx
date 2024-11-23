@@ -58,7 +58,7 @@ export default function AdminNewsEventsPage() {
   const filteredItems = newsEvents.filter((item) =>
     item.headline.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.caption.toLowerCase().includes(searchQuery.toLowerCase())
- );
+  );
 
   const currentItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 

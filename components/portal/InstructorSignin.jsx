@@ -113,6 +113,10 @@ export default function InstructorSignin() {
               <span className='place-self-center'>Don't have an Account? <Link href="/instructor/signup" className={`text-[${Colors.primary}]`}>Sign up</Link></span>
             </div>
           </form>
+
+          <span className='place-self-start'>
+            Go Back to <Link href="/" className={`text-[${Colors.primary}]`}>Homepage</Link>
+          </span>
         </div>
 
         <div className={`col-span-1 bg-[${Colors.primary}] flex justify-center items-center rounded-md`}>
