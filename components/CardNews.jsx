@@ -6,6 +6,8 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function CardNews({title, date, description, image, id}) {
+
+    
   
     return (
     <div className='w-full  shadow-md rounded-[10px]'>
@@ -21,8 +23,7 @@ export default function CardNews({title, date, description, image, id}) {
                 </p>
             </div>
             <Link href={{
-                pathname: `/news/${id}`,
-                query: { title,  date, description, image }
+                pathname: `/news/${id}`
                 
             }}>
                 <h3 className={`p-2 shadow rounded hover:bg-[#044721] hover:text-white hover:border-none border-[${Colors.primary}] border-2 w-full text-center text-[#044721] font-semibold`}>Read more</h3>

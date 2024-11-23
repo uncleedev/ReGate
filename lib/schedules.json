@@ -1,16 +1,31 @@
 {
     "schedules": [
         {
-            "schedule_id" : "14",
-            "room_no": "102",
+            "schedule_id" : "19",
+            "room_no": "104",
+            "building_name": "ICS",
             "course_code": "APPSDEV",
             "course_name": "Application dev",
             "section": "BSIT 3C",
             "instructor_name": "ello",
-            "class_day": ["Mon, Tue, Wed"],
+            "class_day": ["Mon", "Tue", "Wed"],
             "time" : {
                 "start_time": "9:00am",
                 "end_time": "10:00am"
+            } 
+        },
+        {
+            "schedule_id" : "20",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "HCI",
+            "course_name": "Human Computer Interaction",
+            "section": "BSIT 3C",
+            "instructor_name": "Jonas Macapacagal",
+            "class_day": ["Tue", "Fri"],
+            "time" : {
+                "start_time": "10:00am",
+                "end_time": "11:30am"
             } 
         }
     ]

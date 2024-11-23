@@ -98,52 +98,31 @@
                     ]
                 }
             ],
-            "enrolled": [
-                {
-                    "year_level": 3,
-                    "semesters": [
-                        {
-                            "semester_level": 1,
-                            "courses": [
-                                {
-                                    "course_code": "hello",
-                                    "course_name": "Programming 1",
-                                    "credits": 3,
-                                    "grade": 1.25,
-                                    "section":  "BSIT 1F"
-                                },
-                                {
-                                    "course_code": "PROG1",
-                                    "course_name": "Programming 1",
-                                    "credits": 3,
-                                    "grade": 1.25,
-                                    "section":  "BSIT 1F"
-                                }
-                            ]
-                        },
-                        {
-                            "semester_level": 2,
-                            "courses": [
-                                {
-                                    "course_code": "hi",
-                                    "course_name": "Programming 1",
-                                    "credits": 3,
-                                    "grade": 1.25,
-                                    "section":  "BSIT 1F"
-                                },
-                                {
-                                    "course_code": "PROG1",
-                                    "course_name": "Programming 1",
-                                    "credits": 3,
-                                    "grade": 1.25,
-                                    "section":  "BSIT 1F"
-                                }
-                            ]
-                        }
-
-                    ]
-                }
-            ]
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "hello",
+                        "course_name": "Programming 1",
+                        "credits": 3,
+                        "section":  "BSIT 1F"
+                    },
+                    {
+                        "course_code": "PROG1",
+                        "course_name": "Programming 1",
+                        "credits": 3,
+                        "section":  "BSIT 1F"
+                    },
+                    {
+                        "course_code": "HCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
         }
     ]
 

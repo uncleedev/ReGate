@@ -1,34 +1,28 @@
 import React from 'react';
 
-export default function CardSchedule({ color }) {
-  // Set the opacity value
+export default function CardSchedule({ color, course_name, course_code, building_name, instructor_name, section, class_day, start_time, end_time, room_no }) {
   const opacity = 0.25;
 
-  // Create a background color with opacity using RGBA
   const rgbaColor = `rgba(${hexToRgb(color).join(', ')}, ${opacity})`;
 
   return (
-    <div className={`p-4 border-2 rounded-[10px] shadow-md`} style={{ backgroundColor: rgbaColor, borderColor: color }}>
-      <h4>Advance Computer Service System (<span>ACSS</span>)</h4>
+    <div className={`w-full p-4 border-2 rounded-[10px] shadow-md`} style={{ backgroundColor: rgbaColor, borderColor: color }}>
+      <h4>{course_name} (<span>{course_code}</span>)</h4>
       <div className='flex items-center justify-between'>
         <div>
-          <h5>ICS</h5>
-          <h5>Mr. Example</h5>
-          <h5>BSIT 3C</h5>
+          <h5>{building_name} - {room_no}</h5>
+          <h5>{instructor_name}</h5>
+          <h5>{section}</h5>
         </div>
         <div className='flex flex-col items-center gap-1'>
           <ul className='flex gap-1'>
-            <li>M</li>
-            <li>M</li>
-            <li>M</li>
-            <li>M</li>
-            <li>M</li>
-            <li>M</li>
-            <li>M</li>
+            {class_day.map((day) => (
+              <li>{day}</li>
+            ))}
           </ul>
           <div className='flex gap-3'>
-            <span className='p-2 rounded' style={{ backgroundColor: color }}>9:00am</span>
-            <span className='p-2 rounded' style={{ backgroundColor: color }}>9:00am</span>
+            <span className='p-2 rounded' style={{ backgroundColor: color }}>{start_time}</span>
+            <span className='p-2 rounded' style={{ backgroundColor: color }}>{end_time}</span>
           </div>
         </div>
       </div>
@@ -36,9 +30,7 @@ export default function CardSchedule({ color }) {
   );
 }
 
-// Helper function to convert hex to RGB
 function hexToRgb(hex) {
-  // Remove the hash at the start if it's there
   hex = hex.replace(/^#/, '');
 
   // Parse r, g, b

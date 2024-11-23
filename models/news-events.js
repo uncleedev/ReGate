@@ -10,7 +10,8 @@ const newsEventsSchema = new Schema({
         required: true,
     },
     date: {
-        type: String
+        type: Date,
+        required: true 
     },
     image: { 
         type: String,

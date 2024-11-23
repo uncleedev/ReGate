@@ -111,6 +111,10 @@ export default function StudentSignin() {
                             Don't have an Account? <Link href="/student/signup" className={`text-[${Colors.primary}]`}>Sign up</Link>
                         </span>
                     </form>
+                    
+                    <span className='place-self-start'>
+                        Go Back to <Link href="/" className={`text-[${Colors.primary}]`}>Homepage</Link>
+                    </span>
                 </ div>
                 <div className={`col-span-1 bg-[${Colors.primary}] flex justify-center items-center rounded-md`}>
                     <Image src={require("@/public/images/signin.svg")} />
