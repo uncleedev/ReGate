@@ -8,7 +8,7 @@
             "course_name": "Application dev",
             "section": "BSIT 3C",
             "instructor_name": "ello",
-            "class_day": ["Mon", "Tue", "Wed"],
+            "class_day": ["Mon", "Tue", "Wed", "Sat"],
             "time" : {
                 "start_time": "9:00am",
                 "end_time": "10:00am"
