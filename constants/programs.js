@@ -81,19 +81,19 @@ export const Programs = [
                         
                     },
                     {
-                        course_code: "MATWRLD",
+                        course_code: "ART",
                         course_name: "Art Appreciation",
                         credits: 3
                         
                     },
                     {
-                        course_code: "UNDSELF",
+                        course_code: "GE FIL",
                         course_name: "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
                         credits: 3
                         
                     },
                     {
-                        course_code: "GENDSOC",
+                        course_code: "LVITERA",
                         course_name: "Living in IT era",
                         credits: 3
                         
@@ -203,13 +203,13 @@ export const Programs = [
                         
                     },
                     {
-                        course_code: "UNDSELF",
+                        course_code: "FUBDS",
                         course_name: "Fundamentals of Databse Systems",
                         credits: 3
                         
                     },
                     {
-                        course_code: "GENDSOC",
+                        course_code: "SSD",
                         course_name: "System Software Design",
                         credits: 3
                         
