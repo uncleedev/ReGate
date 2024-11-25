@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "students" : "json-server ./lib/students.json -p 3001",
-    "schedules" : "json-server ./lib/schedules.json -p 3002"
+    "schedules" : "json-server ./lib/schedules.json -p 3002",
+    "instructors" : "json-server ./lib/instructors.json -p 3003"
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",

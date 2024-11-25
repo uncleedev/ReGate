@@ -1,0 +1,31 @@
+{
+    "instructors": [
+        {
+            "instructorNo": "22-00001",
+            "firstname": "Marjon",
+            "lastname": "Umbay",
+            "gender": "Male",
+            "email": "umbay@gmail.com",
+            "instructor_type": "Part Time",
+            "handle_courses": [
+                {
+                    "course_code": "APPSDEV",
+                    "course_name": "Application Development",
+                    "credits": 3,
+                    "sections": [
+                        "BSIT 3A",
+                        "BSIT 3B",
+                        "BSIT 3C",
+                        "BSIT 3D",
+                        "BSIT 3E"
+                    ]
+                }
+            ],
+            "payroll": [
+                {
+                    
+                }
+            ]
+        }
+    ]
+}

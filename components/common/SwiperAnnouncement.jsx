@@ -49,7 +49,7 @@ export default function SwiperAnnouncement() {
       autoplay={{ delay: 10000, disableOnInteraction: false }}
       loop={true}
       modules={[Autoplay, Navigation, Pagination]}
-      className='w-full h-[250px] md:h-[500px] shadow rounded-lg'
+      className='w-full h-full shadow rounded-lg'
     >
       {announcements.map((data) => (
         <SwiperSlide key={data.id} className='w-full flex justify-center items-center relative'>

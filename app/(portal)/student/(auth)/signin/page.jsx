@@ -6,7 +6,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 export default async function StudentSignInPage() {
 
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(authOptions.providers)
 
   if (session) redirect("/student/dashboard")
 

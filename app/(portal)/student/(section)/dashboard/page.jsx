@@ -1,5 +1,7 @@
 "use client";
 
+import PieChartComp from '@/components/charts/PieChartComp';
+import SwiperAnnouncement from '@/components/common/SwiperAnnouncement';
 import CardSchedule from '@/components/portal/CardSchedule';
 import { Colors } from '@/constants/colors';
 import { useTheme } from '@/context/ThemeContext';
@@ -86,13 +88,16 @@ export default function StudentDashboardPage() {
   return (
     <>
       <div className='grid grid-cols-5 gap-4 h-[40%]'>
-        <div className={`col-span-3 ${isDarkMode ? `bg-[${Colors.background[1]}]` : 'bg-white'} shadow-md rounded-lg flex flex-col items-center justify-start p-3`}>
-          <h2 className={`border-b-2 ${isDarkMode ? 'border-[#FFE714]' : `border-[${Colors.primary}]`} inline-block mb-8`}>Announcements</h2>
+        <div className={`col-span-3 ${isDarkMode ? `bg-[${Colors.background[1]}]` : 'bg-white'} shadow-md rounded-lg flex flex-col items-center justify-start p-3 w-full h-full`}>
+          <h2 className={`border-b-2 ${isDarkMode ? 'border-[#FFE714]' : `border-[${Colors.primary}]`}  mb-8`}>Announcements</h2>
+          <SwiperAnnouncement />
         </div>
         <div className={`col-span-2 ${isDarkMode ? `bg-[${Colors.background[1]}]` : 'bg-white'} shadow-md rounded-lg flex flex-col items-center p-3`}>
-          <h2 className={`border-b-2 ${isDarkMode ? `border-[${Colors.accent}]` : `border-[${Colors.primary}]`} inline-block mb-8`}>
+          <h2 className={`border-b-2 ${isDarkMode ? `border-[${Colors.accent}]` : `border-[${Colors.primary}]`} inline-block mb-4`}>
             Request Status
           </h2>
+
+          <PieChartComp />
         </div>
       </div>
 
@@ -108,7 +113,7 @@ export default function StudentDashboardPage() {
                 <th className='data items-center'>Credits</th>
               </tr>
             </thead>
-            <tbody className='w-full'>
+            <tbody className='w-full overflow-y-auto' style={{ maxHeight: '385px' }}>
               {student?.enrolled?.courses?.length > 0 ? (
                 student.enrolled.courses.map((course, index) => (
                   <tr key={index} className='row'>
@@ -127,7 +132,7 @@ export default function StudentDashboardPage() {
         </div>
         <div className={`col-span-2 ${isDarkMode ? `bg-[${Colors.background[1]}]` : 'bg-white'} shadow-md rounded-lg flex flex-col items-center gap-4 p-3`}>
           <h2 className={`border-b-2 ${isDarkMode ? `border-[${Colors.accent}]` : `border-[${Colors.primary}]`} inline-block`}>Today Schedule</h2>
-          <div className='flex flex-col items-center w-full'>
+          <div className='flex flex-col gap-3 items-center w-full overflow-y-auto' style={{ maxHeight: '450px' }}>
             {todaySchedules.length > 0 ? (
               todaySchedules.map((schedule, index) => (
                 <CardSchedule 

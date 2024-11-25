@@ -17,4 +17,5 @@ export async function POST(req) {
         console.log("Error: ", error)
         return NextResponse.json({message: "An error occured while creating student"}, {status : 500})
     }
-}
+} 
+

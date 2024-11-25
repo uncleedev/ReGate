@@ -100,16 +100,19 @@ export default function StudentSignin() {
 
                             
                         </div>
-                        {error && <p className='text-red-600'>{error}</p>}
-                        <button 
-                            className={`w-full text-center font-semibold border-2 p-3 rounded-lg text-white ${loading ? 'bg-gray-400' : `bg-[${Colors.primary}]`}`}
-                            disabled={loading}
-                        >
-                            {loading ? "Loading..." : "Sign In"}
-                        </button>
-                        <span className='place-self-center'>
-                            Don't have an Account? <Link href="/student/signup" className={`text-[${Colors.primary}]`}>Sign up</Link>
-                        </span>
+
+                        <div className='flex flex-col gap-2 justify-center'>
+                            {error && <p className='text-red-600'>{error}</p>}
+                            <button 
+                                className={`w-full text-center font-semibold border-2 p-3 rounded-lg text-white ${loading ? 'bg-gray-400' : `bg-[${Colors.primary}]`}`}
+                                disabled={loading}
+                            >
+                                {loading ? "Loading..." : "Sign In"}
+                            </button>
+                            <span className='place-self-center'>
+                                Don't have an Account? <Link href="/student/signup" className={`text-[${Colors.primary}]`}>Sign up</Link>
+                            </span>
+                        </div>
                     </form>
                     
                     <span className='place-self-start'>

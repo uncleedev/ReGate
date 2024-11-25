@@ -57,7 +57,7 @@ export default function Topbar({ heading, onClick, email, id }) {
         {isLogout && (
           <div 
             ref={dropdownRef} 
-            className={`${isDarkMode ?  `bg-[${Colors.background[1]}]` : `bg-white`} p-3 absolute right-[24px] top-[100px] shadow-md flex flex-col gap-2`}
+            className={`${isDarkMode ?  `bg-[${Colors.background[1]}]` : `bg-white`} p-3 absolute right-[24px] top-[100px] shadow-md flex flex-col gap-2 z-50`}
           >
             <p>{email}</p>
             <button className='p-2 bg-red-600 text-white rounded w-full' onClick={onClick}>Logout</button>

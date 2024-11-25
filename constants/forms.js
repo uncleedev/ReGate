@@ -1,7 +1,7 @@
 // PRICES
 export const forms = [
     {
-      type: "Form 137",
+      type: "FORM 137",
       price: 10,
     },
     {

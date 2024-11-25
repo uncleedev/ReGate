@@ -22,7 +22,7 @@ export default function AdminRequestsPage() {
   const [quantity, setQuantity] = useState(0);
   const [paymentMethod, setPaymentMethod] = useState("");
   const [paymentStatus, setPaymentStatus] = useState(false);
-  const [printStatus, setPrintStatus] = useState("Pending");
+  const [printStatus, setPrintStatus] = useState("Complete");
 
   const [loading, setLoading] = useState(false);
   const [requests, setRequests] = useState([]);
@@ -186,9 +186,38 @@ export default function AdminRequestsPage() {
     handleDeleteRequest();
   };
 
+  const handlePrint = (studentNo, formType) => {
+    // Create a new window
+    const printWindow = window.open('', '_blank');
+  
+    // Add content to the new window
+    printWindow.document.write(`
+      <html>
+        <head>
+          <title>Print Document</title>
+          <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #333; }
+            p { font-size: 18px; }
+          </style>
+        </head>
+        <body>
+          <h1>Form Type: ${formType}</h1>
+          <p>Student No: ${studentNo}</p>
+          <p>Thank you for your request!</p>
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
+
+    printWindow.onload = () => {
+      printWindow.print();
+      printWindow.close(); 
+    };
+  };
+
   const filteredItems = requests.filter(item =>
     item.formType.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item .status.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.receiptNo.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -269,13 +298,13 @@ export default function AdminRequestsPage() {
                     >
                       <option value="Pending">Pending</option>
                       <option value="Complete">Complete</option>
-                      <option value="Rejected">Rejected</option>
+                      <option value="Rejected">Ongoing</option>
                     </select>
                   </td>
                   <td className='data items-center'>
                     <button
                       disabled={!item.paymentStatus}
-                      onClick={() => handlePrint(item.studentNo)}
+                      onClick={() => handlePrint(item.studentNo, item.formType)}
                       className={`${!item.paymentStatus ? `opacity-25` : ``}`}
                     >
                       <Image src={require("@/public/icons/printer.png")} className='h-6 w-6' />

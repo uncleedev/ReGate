@@ -6,11 +6,11 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 
-export default function StudentSignUp() {
+export default function InstructorSignUp() {
   
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [studentNo, setStudentNo] = useState("")
+  const [instructorNo, setInstructorNo] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
@@ -26,12 +26,11 @@ export default function StudentSignUp() {
     return minLength.test(password) && upperCase.test(password) && specialChar.test(password) && number.test(password);
   };
   
-
   const handleSignup = async (e) => {
     e.preventDefault();
     setLoading(true)
 
-    if (studentNo === "" || email === "" || password === "" || confirmPassword === "") {
+    if (instructorNo === "" || email === "" || password === "" || confirmPassword === "") {
       setError("Please fill in all fields");
       setLoading(false)
       return;
@@ -44,78 +43,76 @@ export default function StudentSignUp() {
     }
 
     if (!isPasswordValid(password)) {
-      setError("Password must be at least 8 characters long, contain an uppercase letter, a special character, and a number")
+      setError("Password must be at least 8 characters long, contain an uppercase letter, a special character, and a number");
       setLoading(false)
-      return
+      return;
     }
 
     try {
-        const studentExists = await fetch("/api/student-exists", {
+        const instructorExistResponse = await fetch("/api/instructor-exists", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ studentNo, email })
+            body: JSON.stringify({ instructorNo, email })
         });
 
-        const { student } = await studentExists.json();
+        const instructorExist = await instructorExistResponse.json();
 
-        if (student) {
-            if (student.studentNo === studentNo) {
-                setError("Student No. is already registered!");
+        if (instructorExist.instructor) {
+            if (instructorExist.instructor.instructorNo === instructorNo) {
+                setError("Instructor No. is already registered!");
                 setLoading(false)
                 return;
             }
 
-            if (student.email === email) {
+            if (instructorExist.instructor.email === email) {
                 setError("Email is already registered!");
                 setLoading(false)
                 return;
             }
         }
 
-        const resStudents = await fetch("http://localhost:3001/students", {
+        const resInstructors = await fetch("http://localhost:3003/instructors", {
           method: "GET",
           headers: {
             "Content-Type": "application/json"
           }
-        })
-
-        const students = await resStudents.json()
-
-        const studentEnrolled = students.find(student => student.studentNo === studentNo)
-
-        if (!studentEnrolled) {
-          setError("Student No. is not enrolled yet")
-          setLoading(false) 
-          return
-        }
-
-        const res = await fetch("/api/student-signup", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                studentNo, email, password
-            })
         });
 
-        if (res.ok) {
-            setStudentNo("");
-            setEmail("");
-            setPassword("");
-            setConfirmPassword("");
-            setError("")
-            setLoading(false)
+        const instructors = await resInstructors.json();
+
+        const instructorEnrolled = instructors.find(inst => inst.instructorNo === instructorNo);
+
+        if (!instructorEnrolled) {
+          setError("Instructor No. is not registered!");
+          setLoading(false) 
+          return;
         }
 
+        const res = await fetch("/api/instructor-signup", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              instructorNo, email, password
+          })
+      });
+
+      if (res.ok) {
+          setInstructorNo("");
+          setEmail("");
+          setPassword("");
+          setConfirmPassword("");
+          setError("")
+      }
     } catch (error) {
-        setError("An error occurred during registration.");
-        setLoading(false)
+        setError("An error occurred during he registration.");
+    } finally {
+        setLoading(false);
     }
   };
-
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -126,7 +123,7 @@ export default function StudentSignUp() {
   };
 
   return (
-    <div className="flex justify-center items-center p-24 w-full h-full bg -[#f1f1f1]">
+    <div className="flex justify-center items-center p-24 w-full h-full bg-[#f1f1f1]">
       <div className='shadow-md rounded-md w-full h-full grid grid-cols-2 bg-white'>
         <div className={`col-span-1 bg-[${Colors.primary}] flex justify-center items-center rounded-md`}>
           <Image src={require("@/public/images/signup.svg")} alt="Sign Up" />
@@ -137,13 +134,13 @@ export default function StudentSignUp() {
           <form onSubmit={handleSignup} className='w-full flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-4'>
               <div className='flex flex-col gap-2'>
-                <label htmlFor="">Student No. :</label>
+                <label htmlFor="">Instructor No. :</label>
                 <input 
                   className='p-2 shadow shadow-black focus:outline-[#FFE714] rounded-lg' 
                   type="text" 
-                  value={studentNo} 
+                  value={instructorNo} 
                   onChange={(e) => {
-                    setStudentNo(e.target.value)
+                    setInstructorNo(e.target.value)
                     setError("")
                   }} 
                 />
@@ -224,7 +221,7 @@ export default function StudentSignUp() {
               >
                 {loading ? "Loading..." : "Sign Up"}
               </button>
-              <span className='place-self-center'>Already have an Account? <Link href="/student/signin" className={`text-[${Colors.primary}]`}>Sign in</Link></span>
+              <span className='place-self-center'>Already have an Account? <Link href="/instructor/signin" className={`text-[${Colors.primary}]`}>Sign in</Link></span>
             </div>
           </form>
         </div>
