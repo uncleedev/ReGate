@@ -1,83 +1,198 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from '@/components/common/Modal';
 import { Colors } from '@/constants/colors';
 import { useTheme } from '@/context/ThemeContext';
-import { requests } from '@/sample/data';
 import { forms } from '@/constants/forms';
 import Image from 'next/image';
 
 const ITEMS_PER_PAGE = 11;
 
 export default function AdminRequestsPage() {
-  const [showModal, setShowModal] = useState(false);
-  const [editModalOpen, setEditModalOpen] = useState(false);
+  const { isDarkMode } = useTheme();
+  
+  const [createModal, setCreateModal] = useState(false);
+  const [editModal, setEditModal] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
+
+  const [receiptNo, setReceiptNo] = useState("R0002");
+  const [studentNo, setStudentNo] = useState("");
+  const [formType, setFormType] = useState("");
+  const [quantity, setQuantity] = useState(0);
+  const [paymentMethod, setPaymentMethod] = useState("");
+  const [paymentStatus, setPaymentStatus] = useState(false);
+  const [printStatus, setPrintStatus] = useState("Pending");
+
+  const [loading, setLoading] = useState(false);
+  const [requests, setRequests] = useState([]);
   const [editItem, setEditItem] = useState(null);
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteItem, setDeleteItem] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const { isDarkMode } = useTheme();
 
-  const [items, setItems] = useState(requests.map(item => ({
-    ...item,
-    isPaid: item.payment_status.toString(),
-    status: item.status
-  })));
+  const totalPages = Math.ceil(requests.length / ITEMS_PER_PAGE);
 
-  const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
-
-  const handleEditClick = (item) => {
-    setEditItem(item);
-    setEditModalOpen(true);
+  const clearInputs = () => {
+    setStudentNo("");
+    setFormType("");
+    setQuantity(0);
+    setPaymentMethod("");
   };
 
-  const handleEditSubmit = (e) => {
+  useEffect(() => {
+    const fetchRequests = async () => {
+      try {
+        const res = await fetch("/api/request");
+        const data = await res.json();
+        if (res.ok) {
+          setRequests(data);
+        }
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchRequests();
+  },[] );
+
+  const handleCreateRequest = async (e) => {
     e.preventDefault();
-    const updatedItems = items.map(req => req.id === editItem.id ? { ...editItem } : req);
-    setItems(updatedItems);
-    setEditModalOpen(false);
-  };
+    setLoading(true);
 
-  const handleDeleteClick = (item) => {
-    setDeleteItem(item);
-    setShowDeleteModal(true);
-  };
+    try {
+      const res = await fetch("/api/request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          receiptNo,
+          studentNo,
+          formType,
+          quantity,
+          paymentMethod,
+          paymentStatus,
+          printStatus
+        })
+      });
 
-  const confirmDelete = () => {
-    const updatedItems = items.filter(req => req.id !== deleteItem.id);
-    setItems(updatedItems);
-    setShowDeleteModal(false);
-    setDeleteItem(null);
-  };
+      const data = await res.json()
 
-  const handleCancelDelete = () => {
-    setShowDeleteModal(false);
-    setDeleteItem(null);
-  };
+      if (res.ok) {
+        setCreateModal(false);
+        clearInputs();
+      }
 
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
+    } catch (error) {
+      console.error("Error submitting form: ", error);
+    } finally {
+      setLoading(false);
+    }
+  };  
+
+  const handleEditRequest = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/request", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          id: editItem._id,
+          receiptNo: editItem.receiptNo,
+          studentNo: editItem.studentNo,
+          formType: editItem.formType,
+          quantity: editItem.quantity,
+          paymentMethod: editItem.paymentMethod,
+          paymentStatus: editItem.paymentStatus,
+          printStatus: editItem.printStatus
+        })
+      });
+
+      if (res.ok) {
+        setEditModal(false);
+        clearInputs();
+      }
+    } catch (error) {
+      console.error("Error submitting form: ", error);
+    } finally {
+      setLoading(false);
     }
   };
 
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+  const handleDeleteRequest = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/request", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ id: deleteItem._id })
+      });
+
+      if (res.ok) {
+        setDeleteModal(false);
+        setDeleteItem(null);
+      }
+    } catch (error) {
+      console.error("Error deleting request: ", error);
+    } finally {
+      setLoading(false);
     }
   };
 
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const handleUpdateStatus = async (id, updatedData) => {
+    try {
+      const res = await fetch("/api/request", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ id, ...updatedData })
+      });
+  
+      if (!res.ok) {
+        throw new Error("Failed to update request");
+      }
+  
+      const data = await res.json();
+      // Optionally handle the response data if needed
+    } catch (error) {
+      console.error("Error updating status: ", error);
+    }
+  };
+  
+  const handlePaymentStatusChange = (item, e) => {
+    const updatedPaymentStatus = e.target.value === 'true';
+    const updatedItems = requests.map(i => i._id === item._id ? { ...i, paymentStatus: updatedPaymentStatus } : i);
+    setRequests(updatedItems);
+    handleUpdateStatus(item._id, { paymentStatus: updatedPaymentStatus });
+  };
+  
+  const handlePrintStatusChange = (item, e) => {
+    const updatedPrintStatus = e.target.value;
+    const updatedItems = requests.map(i => i._id === item._id ? { ...i, printStatus: updatedPrintStatus } : i);
+    setRequests(updatedItems);
+    handleUpdateStatus(item._id, { printStatus: updatedPrintStatus });
+  };
 
-  const filteredItems = items.filter(item =>
-    item.form_type.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.status.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.requests_no.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase())
+  const confirmDelete = (e) => {
+    e.preventDefault();
+    handleDeleteRequest();
+  };
+
+  const filteredItems = requests.filter(item =>
+    item.formType.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item .status.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.receiptNo.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const currentItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentItems = filteredItems.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
 
   return (
     <>
@@ -95,14 +210,14 @@ export default function AdminRequestsPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            <button onClick={() => setShowModal(true)} className='bg-blue-700 text-white p-3 rounded-md shadow-sm'>Create new</button>
+            <button onClick={() => setCreateModal(true)} className='bg-blue-700 text-white p-3 rounded-md shadow-sm'>Create new</button>
           </div>
         </div>
 
         <div className={`rounded-md shadow-md ${isDarkMode ? `bg-[#282828] text-white` : 'bg-white text-black'}`}>
           <table className={`flex flex-col w-full`}>
             <thead className='w-full'>
-              < tr className={`flex justify-between items-center p-2 bg-[${Colors.primary}] bg-opacity-75  text-white rounded-t-md`}>
+              <tr className={`flex justify-between items-center p-2 bg-[${Colors.primary}] bg-opacity-75 text-white rounded-t-md`}>
                 <th className='data items-center'>Receipt no.</th>
                 <th className='data items-center'>Student no.</th>
                 <th className='data items-center'>Form Type</th>
@@ -115,27 +230,24 @@ export default function AdminRequestsPage() {
             </thead>
             <tbody className='w-full'>
               {currentItems.map(item => (
-                <tr key={item.id} className='row'>
-                  <td className='data items-center'>{item.requests_no}</td>
-                  <td className='data items-center'>{item.student_no}</td>
-                  <td className='data items-center'>{item.form_type}</td>
+                <tr key={item._id} className='row'>
+                  <td className='data items-center'>{item.receiptNo}</td>
+                  <td className='data items-center'>{item.studentNo}</td>
+                  <td className='data items-center'>{item.formType}</td>
                   {forms.map((form) => (
-                    form.type === item.form_type ? (
+                    form.type === item.formType ? (
                       <td className='data items-center' key={form.type}>
                         <span>₱ {form.price}</span> &nbsp;| &nbsp; <span>x{item.quantity}</span> &nbsp;| &nbsp; <span>₱ {form.price * item.quantity}</span>
                       </td>
                     ) : null
                   ))}
                   <td className='data items-center'>
-                    <span>{item.payment_method}</span> &nbsp;| &nbsp;
+                    <span>{item.paymentMethod}</span> &nbsp;| &nbsp;
                     <select
                       name="payment"
-                      value={item.isPaid}
-                      onChange={(e) => {
-                        const updatedItems = items.map(i => i.id === item.id ? { ...i, isPaid: e.target.value } : i);
-                        setItems(updatedItems);
-                      }}
-                      className={`p-1 rounded focus:outline-none ${item.isPaid === 'true' ? `bg-[${Colors.primary}] border-[${Colors.primary}]` : `bg-red-600 border-red-600`} bg-opacity-25 border`}
+                      value={item.paymentStatus.toString()}
+                      onChange={(e) => handlePaymentStatusChange(item, e)}
+                      className={`p-1 rounded focus:outline-none ${item.paymentStatus ? `bg-[${Colors.primary}] border-[${Colors.primary}]` : `bg-red-600 border-red-600`} bg-opacity-25 border`}
                     >
                       <option value={'true'}>Paid</option>
                       <option value={'false'}>Unpaid</option>
@@ -144,43 +256,46 @@ export default function AdminRequestsPage() {
                   <td className='data items-center'>
                     <select
                       name="status"
-                      value={item.status}
-                      disabled={item.isPaid !== 'true'}
-                      onChange={(e) => {
-                        const updatedItems = items.map(i => i.id === item.id ? { ...i, status: e.target.value } : i);
-                        setItems(updatedItems);
-                      }}
+                      value={item.printStatus}
+                      disabled={!item.paymentStatus}
+                      onChange={(e) => handlePrintStatusChange(item, e)}
                       className={`p-1 rounded focus:outline-none bg-opacity-25 border ${
-                        item.status === "Completed"
+                        item.printStatus === "Complete"
                           ? `bg-[${Colors.primary}] border-[${Colors.primary}]`
-                          : item.status === "Pending"
+                          : item.printStatus === "Pending"
                           ? `bg-orange-600 border-orange-600`
                           : `bg-red-600 border-red-600`
                       }`}
                     >
                       <option value="Pending">Pending</option>
-                      <option value="Completed">Completed</option>
+                      <option value="Complete">Complete</option>
                       <option value="Rejected">Rejected</option>
                     </select>
                   </td>
                   <td className='data items-center'>
                     <button
-                      disabled={item.isPaid !== 'true'}
-                      onClick={() => handlePrint(item.student_no)}
-                      className={`${item.isPaid !== 'true' ? `opacity-25` : ``}`}
+                      disabled={!item.paymentStatus}
+                      onClick={() => handlePrint(item.studentNo)}
+                      className={`${!item.paymentStatus ? `opacity-25` : ``}`}
                     >
                       <Image src={require("@/public/icons/printer.png")} className='h-6 w-6' />
                     </button>
                   </td>
                   <td className='data items-center flex gap-4'>
                     <button
-                      onClick={() => handleEditClick(item)}
+                      onClick={() => {
+                        setEditItem(item);
+                        setEditModal(true);
+                      }}
                       disabled={item.status === 'Done'}
                       className={`${item.status === 'Done' ? `opacity-25` : ``}`}
                     >
                       <Image src={require("@/public/icons/edit.png")} height={24} width={24} alt="Edit" />
                     </button>
-                    <button onClick={() => handleDeleteClick(item)}>
+                    <button onClick={() => {
+                      setDeleteItem(item);
+                      setDeleteModal(true);
+                    }}>
                       <Image src={require("@/public/icons/delete.png")} height={24} width={24} alt="Delete" />
                     </button>
                   </td>
@@ -189,65 +304,88 @@ export default function AdminRequestsPage() {
             </tbody>
           </table>
           <div className='flex justify-around p-4'>
-            <button onClick={handlePrevPage} disabled={currentPage === 1} className='btn'>
+            <button onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))} disabled={currentPage === 1} className='btn'>
               Previous
             </button>
             <span>
               Page {currentPage} of {totalPages}
             </span>
-            <button onClick={handleNextPage} disabled={currentPage === totalPages} className='btn'>
+            <button onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages} className='btn'>
               Next
             </button>
           </div>
         </div>
       </div>
 
-      < Modal isOpen={showModal} onClose={() => setShowModal(false)} title={"Create new Request"}>
-        <form className='flex flex-col gap-4'>
+      <Modal isOpen={createModal} onClose={() => setCreateModal(false)} title={"Create new Request"}>
+        <form className='flex flex-col gap-4' onSubmit={handleCreateRequest}>
           <div style={styles.group}>
             <label style={styles.label} htmlFor="">Student No.</label>
-            <input style={styles.input} type="text" />
+            <input 
+              style={styles.input} 
+              type="text"
+              value={studentNo}
+              onChange={(e) => setStudentNo(e.target.value)} 
+            />
           </div>
 
           <div style={styles.group}>
             <label style={styles.label} htmlFor="">Form Type</label>
-            <select style={styles.input} name="" id="">
-              <option disabled value="default" selected>Select Form Type</option>
-              <option value="">OVRF</option>
-              <option value="">Form 137</option>
+            <select 
+              style={styles.input}
+              onChange={(e) => setFormType(e.target.value)}
+            >
+              <option disabled selected>Select Form Type</option>
+              <option value="OVRF">OVRF</option>
+              <option value="FORM 137">Form 137</option>
             </select>
           </div>
 
           <div style={styles.group}>
             <label style={styles.label} htmlFor="">Quantity</label>
-            <input style={styles.input} type="number" name="" id="" />
+            <input 
+              style={styles.input} 
+              type="number"
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
+            />
           </div>
           
           <div style={styles.group}>
             <label style={styles.label} htmlFor="">Payment</label>
-            <select style={styles.input} onChange={(e) => e.target.value} name="" id="">
-              <option value="default" selected disabled>Select your payment method</option>
+            <select 
+              style={styles.input}
+              value={paymentMethod} 
+              onChange={(e) => setPaymentMethod(e.target.value)}
+            >
+              <option value="default" disabled>Select your payment method</option>
               <option value="Cash">Cash</option>
               <option value="Online">Online</option>
             </select>
           </div>
 
           <div className='flex items-center justify-between gap-3'>
-            <button onClick={() => setShowModal(false)} style={styles.button} className='bg-red-600'>Cancel</button>
-            <button style={styles.button} className='bg-blue-600'>Submit</button>
+            <button onClick={() => setCreateModal(false)} style={styles.button} className='bg-red-600'>Cancel</button>
+            <button 
+              style={styles.button} 
+              className='bg-blue-600'
+              type='submit'
+            >
+              {loading ? "Loading..." : "Submit"}
+            </button>
           </div>
         </form>
       </Modal>
 
-      <Modal isOpen={editModalOpen} onClose={() => setEditModalOpen(false)} title={"Edit Request"}>
-        <form className='flex flex-col gap-4' onSubmit={handleEditSubmit}>
+      <Modal isOpen={editModal} onClose={() => setEditModal(false)} title={"Edit Request"}>
+        <form className='flex flex-col gap-4' onSubmit={handleEditRequest}>
           <div style={styles.group}>
             <label style={styles.label} htmlFor="">Student No.</label>
             <input 
               style={styles.input} 
               type="text" 
-              value={editItem?.student_no || ''} 
-              onChange={(e) => setEditItem({ ...editItem, student_no: e.target.value })} 
+              value={editItem?.studentNo || ''} 
+              onChange={(e) => setEditItem({ ...editItem, studentNo: e.target.value })} 
             />
           </div>
 
@@ -255,12 +393,12 @@ export default function AdminRequestsPage() {
             <label style={styles.label} htmlFor="">Form Type</label>
             <select 
               style={styles.input} 
-              value={editItem?.form_type || ''} 
-              onChange={(e) => setEditItem({ ...editItem, form_type: e.target.value })}
+              value={editItem?.formType || ''} 
+              onChange={(e) => setEditItem({ ...editItem, formType: e.target.value })}
             >
               <option disabled value="default">Select Form Type</option>
               <option value="OVRF">OVRF</option>
-              <option value="Form 137">Form 137</option>
+              <option value="FORM 137">Form 137</option>
             </select>
           </div>
 
@@ -275,24 +413,24 @@ export default function AdminRequestsPage() {
           </div>
 
           <div className='flex items-center justify-between gap-3'>
-            <button onClick={() => setEditModalOpen(false)} style={styles.button} className='bg-red-600'>Cancel</button>
+            <button onClick={() => setEditModal(false)} style={styles.button} className='bg-red-600'>Cancel</button>
             <button style={styles.button} className='bg-blue-600' type="submit">Save Changes</button>
           </div>
         </form>
       </Modal>
 
-      <Modal isOpen={showDeleteModal} onClose={handleCancelDelete} title={"Confirm Deletion"}>
+      <Modal isOpen={deleteModal} onClose={() => setDeleteModal(false)} title={"Confirm Deletion"}>
         <div className='flex flex-col gap-4'>
-            <p>Are you sure you want to delete this item with Receipt No: <strong>{deleteItem?.requests_no}</strong>?</p>
+            <p>Are you sure you want to delete this item with Receipt No: <strong>{deleteItem?.receiptNo}</strong>?</p>
             <div className='flex items-center justify-between gap-3'>
-                <button onClick={handleCancelDelete} style={styles.button} className='bg-red-600'>Cancel</button>
+                <button onClick={() => setDeleteModal(false)} style={styles.button} className='bg-red-600'>Cancel</button>
                 <button onClick={confirmDelete} style={styles.button} className='bg-blue-600'>Delete</button>
             </div>
         </div>
       </Modal>
 
     </>
-  )
+  );
 }
 
 const styles = {
@@ -309,7 +447,7 @@ const styles = {
   },
 
   group: {
-    display: ' flex',
+    display: 'flex',
     flexDirection: 'column',
     gap: "6px"
   },
@@ -320,4 +458,4 @@ const styles = {
     color: 'white',
     borderRadius: '6px',
   }
-}
+};

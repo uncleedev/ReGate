@@ -1,3 +1,5 @@
+"use client"
+
 import CardNews from '@/components/CardNews'
 import React, { useEffect, useState } from 'react'
 
@@ -6,7 +8,7 @@ export default function NewsPage() {
   const [newsEvents, setNewsEvents] = useState([])
 
   useEffect(() => {
-    const fetchNewsEvens = async () => {
+    const fetchNewsEvents = async () => {
       try {
         const res = await fetch("/api/news-events", {
           method: "GET",
@@ -26,6 +28,8 @@ export default function NewsPage() {
         console.error("Error fetching data:", error);
       }
     }
+
+    fetchNewsEvents()
   })
 
   return (
@@ -34,12 +38,12 @@ export default function NewsPage() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 w-full">
             {newsEvents.map((data) => (
                 <CardNews 
-                    key={data.id} 
+                    key={data._id} 
                     image={data.image}  
-                    title={data.title} 
-                    description={data.description}  
+                    title={data.headline} 
+                    description={data.caption}  
                     date={data.date}
-                    id={data.id}
+                    id={data._id}
                 />
             ))}
         </div>
