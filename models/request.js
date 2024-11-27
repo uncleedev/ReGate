@@ -30,7 +30,8 @@ const requestSchema = new Schema({
     },
     printStatus: {
         type: String,
-        enum: ["Complete", "Pending", "Ongoing"] 
+        enum: ["Complete", "Pending", "Ongoing"],
+        default: "Pending" 
     }
 }, { timestamps: true });
 

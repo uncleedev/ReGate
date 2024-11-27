@@ -10,7 +10,7 @@ export async function POST(req) {
         const hashedPassword = await bcrypt.hash(password, 10)
 
         await connectMongoDB()
-        await Student.create({studentNo, email, password: hashedPassword})
+        await Student.create({studentNo, email, password: hashedPassword, role: 'student'})
 
         return NextResponse.json({message : "Student created successfully"}, {status : 201})
     } catch (error) {

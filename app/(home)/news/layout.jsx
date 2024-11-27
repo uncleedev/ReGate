@@ -43,18 +43,18 @@ export default function NewsLayout({ children }) {
         }
     
         fetchNewsEvents()
-      })
+    }, []); // Added dependency array to avoid infinite loop
 
     return (
-        <div>
+        <div className="flex flex-col min-h-screen">
             <Navbar />
             <HeroSection heading={"News & Updates"} />
-            <div className='w-full paddingvr grid grid-cols-5 gap-8 '>
-                <div className='col-span-4 flex flex-col gap-9'>    
+            <div className='w-full paddingvr grid grid-cols-1 md:grid-cols-5 gap-8 p-4'>
+                <div className='col-span-1 md:col-span-4 flex flex-col gap-9'>    
                     {children}
                     <div>
-                        <h2 className='text-center mb-4'>Other News</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 w-full">
+                        <h2 className='text-center mb-4 text-xl md:text-2xl'>Other News</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10 w-full">
                             {news.slice(0, 6).map((data) => (
                                 <CardNews 
                                     key={data._id} 
@@ -68,11 +68,11 @@ export default function NewsLayout({ children }) {
                         </div>
                     </div>
                 </div>
-                <div className='col-span-1 flex flex-col border-l-2 border-gray-400 items-center'>
-                    <h2>Latest News</h2>
+                <div className='col-span-1 flex flex-col border-l-2 border-gray-400 items-center md:mt-0 mt-4'>
+                    <h2 className='text-lg md:text-xl'>Latest News</h2>
                     <ul className='ml-8 mt-3 flex flex-col gap-2'>
                         {recentNews.map((data) => (
-                            <li key={data._id} className='text-[18px] font-medium underline list-disc hover:text-gray-400'>
+                            <li key={data._id} className='font-medium underline list-disc hover:text-gray-400'>
                                 <Link href={{
                                     pathname: `/news/${data._id}`,
                                 }}>{data.headline}</Link>

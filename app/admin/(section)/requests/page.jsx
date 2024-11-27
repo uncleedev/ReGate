@@ -67,7 +67,6 @@ export default function AdminRequestsPage() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          receiptNo,
           studentNo,
           formType,
           quantity,
@@ -186,34 +185,31 @@ export default function AdminRequestsPage() {
     handleDeleteRequest();
   };
 
-  const handlePrint = (studentNo, formType) => {
-    // Create a new window
-    const printWindow = window.open('', '_blank');
-  
-    // Add content to the new window
-    printWindow.document.write(`
-      <html>
-        <head>
-          <title>Print Document</title>
-          <style>
-            body { font-family: Arial, sans-serif; margin: 20px; }
-            h1 { color: #333; }
-            p { font-size: 18px; }
-          </style>
-        </head>
-        <body>
-          <h1>Form Type: ${formType}</h1>
-          <p>Student No: ${studentNo}</p>
-          <p>Thank you for your request!</p>
-        </body>
-      </html>
-    `);
-    printWindow.document.close();
+  const handlePrint =  async (studentNo, formType) => {
 
-    printWindow.onload = () => {
-      printWindow.print();
-      printWindow.close(); 
-    };
+    try {
+      const res = await fetch("/forms/ovrf.php")
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const content = await response.text();
+
+      const printWindow = window.open('', '_blank');
+        
+        // Add content to the new window
+      printWindow.document.write(content);
+      printWindow.document.close();
+
+      // Wait for the content to be fully loaded before printing
+      printWindow.onload = () => {
+          printWindow.print();
+          printWindow.close();
+      };
+    } catch (error) {
+      console.error('Error fetching the PHP file:', error);
+    }
   };
 
   const filteredItems = requests.filter(item =>

@@ -57,7 +57,7 @@ export const authOptions = {
                         return null;
                     }
 
-                    return student; 
+                    return student
                 } catch (error) {
                     console.log("Error: ", error);
                 }

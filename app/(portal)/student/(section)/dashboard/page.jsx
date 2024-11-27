@@ -10,6 +10,7 @@ import { useSession } from 'next-auth/react';
 import React, { useEffect, useState } from 'react';
 
 export default function StudentDashboardPage() {
+
   const { isDarkMode } = useTheme(); 
   const { data: session } = useSession();
 
@@ -17,7 +18,6 @@ export default function StudentDashboardPage() {
   const [schedules, setSchedules] = useState([]);
   const [todaySchedules, setTodaySchedules] = useState([]);
   const email = session?.user?.email;
-  const [sample, setSample] = useState()
 
   useEffect(() => {
     const fetchData = async () => {

@@ -55,9 +55,9 @@ export default function AdminSignInPage() {
   }
 
   return (
-    <div className="flex justify-center items-center p-24 w-full h-full bg-[#f1f1f1]">
-      <div className='shadow-md rounded-md w-full h-full grid grid-cols-2 bg-white'>
-        <div className='col-span-1 w-full flex flex-col items-center gap-12 p-24'>
+    <div className="flex justify-center items-center p-6 md:p-24 w-full h-full bg-[#f1f1f1]">
+      <div className='shadow-md rounded-md w-full md:h-full grid md:grid-cols-2 bg-white'>
+        <div className='col-span-1 w-full flex flex-col items-center gap-12 p-3 md:p-24'>
           <h2 className=''>Sign-in to your account</h2>
 
           <form onSubmit={handleSignin} className='w-full flex flex-col gap-6'>
@@ -117,7 +117,7 @@ export default function AdminSignInPage() {
           </span>
         </div>
 
-        <div className={`col-span-1 bg-[${Colors.primary}] flex justify-center items-center relative rounded-md`}>
+        <div className={`col-span-1 bg-[${Colors.primary}] hidden md:flex justify-center items-center absolute md:relative rounded-md`}>
           <Image src={require("@/public/images/admin.svg")} className='z-30' />
           <Image src={require("@/public/images/prrc-building.jpeg")} className='w-full h-full opacity-5 absolute top-0'/>
         </div>

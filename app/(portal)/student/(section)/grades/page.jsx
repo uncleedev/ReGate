@@ -113,7 +113,7 @@ export default function StudentGradesPage() {
               {courses.length > 0 ? courses.map((course, index) => (
                 <tr className='row' key={index}>
                   <td className='data p-1 items-center'>{course.course_code}</td>
-                  <td className='data p-1 items-center'>{course.course_name}</td>
+                  <td className='data p-1 items-center text-center'>{course.course_name}</td>
                   <td className='data p-1 items-center'>{course.credits}</td>
                   <td className='data p-1 items-center'>{course.grade}</td>
                 </tr>

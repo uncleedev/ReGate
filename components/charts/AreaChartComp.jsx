@@ -1,6 +1,5 @@
 "use client"
 
-import { datas, requests } from '@/sample/data'
 import React from 'react'
 import { Area, AreaChart, Legend, ResponsiveContainer, Tooltip } from 'recharts'
 
@@ -10,7 +9,7 @@ export default function AreaChartComp() {
 
   return (
     <ResponsiveContainer width="100%" height={"100%"}>
-      <AreaChart height={"100%"} width={"100%"} data={datas}>
+      <AreaChart height={"100%"} width={"100%"}>
         <Tooltip />
         <Legend />
         <Area 

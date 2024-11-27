@@ -1,10 +1,7 @@
 "use client";
 
 import Topbar from '@/components/common/Topbar';
-import CustomButton from '@/components/CustomButton';
 import React from 'react';
-import { Colors } from '@/constants/colors';
-import { usePathname, useRouter } from 'next/navigation';
 import { ThemeProvider, useTheme } from '@/context/ThemeContext';
 import Sidebar from '@/components/common/Sidebar';
 import { AdminMenu, InstructorMenu } from '@/constants/navigation';

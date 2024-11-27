@@ -1,9 +1,7 @@
 "use client";
 
 import Topbar from '@/components/common/Topbar';
-import CustomButton from '@/components/CustomButton';
 import React, { useEffect, useState } from 'react';
-import { Colors } from '@/constants/colors';
 import { ThemeProvider, useTheme } from '@/context/ThemeContext';
 import Sidebar from '@/components/common/Sidebar';
 import { InstructorMenu } from '@/constants/navigation';

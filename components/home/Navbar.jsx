@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <header className='w-full px-[160px] pt-12 absolute top-0 z-30 text-white'>
+    <header className='w-full px-[160px] hidden md:block pt-12 absolute top-0 z-30 text-white'>
         <ul className='menu'>
             <li className='menu__item relative group'>
                 <Link href={"#"}>Portal ▼</Link>
@@ -40,14 +40,22 @@ export default function Navbar() {
                 <Link href={"/administrations"}>Administrations ▼</Link>
                 <ul className='dropdown__menu group-hover:block w-[500px]'>
                     <Link href={"/administrations/office-of-the-president"}><li className='dropdown__item'>Office of the President</li></Link>
+                    <Link href={"/administrations/office-of-the-vice-president-for-administration"}><li className='dropdown__item '>Office of the Vice President for Administration</li></Link>
                     <Link href={"/administrations/office-of-the-vice-president-for-academic-affairs"}><li className='dropdown__item'>Office of the Vice President for Academic Affairs</li></Link>
-                    <Link href={"/administrations/office-of-the-vice-president-for-administration-and-finance"}><li className='dropdown__item '>Office of the Vice President for Administration and Finance</li></Link>
                 </ul>
             </li>
 
             <Link href={"/programs"}><li className='menu__item'>Programs</li></Link>
 
-            <Link href={"/about"}><li className='menu__item'>About</li></Link>
+            <li className='menu__item relative group'>
+                <Link href={""}>Services ▼</Link>
+                <ul className='dropdown__menu group-hover:block w-[200px]'>
+                    <Link href={"/news"}><li className='dropdown__item'>News and Events</li></Link>
+                    <Link href={"/announcements"}><li className='dropdown__item'>Announcements</li></Link>
+                    <Link href={"/about"}><li className='dropdown__item'>About</li></Link>
+                   
+                </ul>
+            </li>
         </ul>
     </header>
   )

@@ -14,10 +14,15 @@ const ITEMS_PER_PAGE = 9;
 
 export default function StudentRequestPage() {
 
+  
+  const { isDarkMode } = useTheme()
+  
   const [searchQuery, setSearchQuery] = useState('');
   const [showModal, setShowModal] = useState(false)
 
-  const { isDarkMode } = useTheme()
+  const [formType, setFormType] = useState("")
+  const [quantity, setQuantity] = useState(0)
+  const [paymentMethod, setPaymentMethod] = useState("")
 
   const [currentPage, setCurrentPage] = useState(1);
 

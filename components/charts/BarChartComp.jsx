@@ -1,11 +1,10 @@
-import { datas } from '@/sample/data'
 import React from 'react'
 import { Bar, BarChart, CartesianAxis, CartesianGrid, Legend, ResponsiveContainer, Tooltip, ZAxis } from 'recharts'
 
 export default function BarChartComp() {
   return (
     <ResponsiveContainer height={"100%"} width={"100%"}>
-        <BarChart height={"100%"} width={"100%"} data={datas}>
+        <BarChart height={"100%"} width={"100%"}>
             <Tooltip />
             <ZAxis dataKey={"name"} />
             <Legend />

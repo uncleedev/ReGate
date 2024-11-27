@@ -36,7 +36,7 @@ export default function NewsUpdateSection() {
   return (
     <section className={`bg-white w-full paddingvr flex flex-col gap-9 justify-between items-center`}>
       <h2 className={`text-[${Colors.primary}]`}>News & Updates</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10 w-full">
         {newsEvents.slice(0, 6).map((data) => (
           <CardNews 
             key={data.id} 

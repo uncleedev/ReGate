@@ -1,6 +1,5 @@
 "use client"
 
-import CardNews from '@/components/CardNews'
 import HeroSection from '@/components/common/HeroSection'
 import Footer from '@/components/home/Footer'
 import Navbar from '@/components/home/Navbar'

@@ -1,4 +1,3 @@
-import { datas } from '@/sample/data'
 import React from 'react'
 import { Pie, PieChart, ResponsiveContainer } from 'recharts'
 
@@ -7,7 +6,6 @@ export default function PieChartComp() {
     <ResponsiveContainer width={"100%"} height={"100%"}>
         <PieChart width={"100%"} height={"100%"}>
             <Pie 
-                data={datas}
                 dataKey={"uv"}
                 fill='#8833FF'
                 stroke='#8833FF'
@@ -17,7 +15,6 @@ export default function PieChartComp() {
             />
 
             <Pie 
-                data={datas}
                 dataKey={"pv"}
                 fill='#E62E7B'
                 stroke='#E62E7B'

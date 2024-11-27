@@ -4,16 +4,39 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
     try {
-        const { receiptNo, studentNo, formType, quantity, paymentMethod, paymentStatus, printStatus } = await req.json()
+        await connectMongoDB();
 
-        await connectMongoDB()
+        const currentYear = new Date().getFullYear().toString().slice(-2);
+        
+        const latestRequest = await Request.findOne({
+            receiptNo: { $regex: `^R${currentYear}-` }
+        }).sort({ createdAt: -1 });
 
-        const request = await Request.create({ receiptNo, studentNo, formType, quantity, paymentMethod, paymentStatus, printStatus })
+        let newIncrement = 1;
+        if (latestRequest) {
+            const latestReceiptNo = latestRequest.receiptNo;
+            const latestIncrement = parseInt(latestReceiptNo.split('-')[1], 10);
+            newIncrement = latestIncrement + 1;
+        }
 
-        return NextResponse.json({ message: "Request created successfully!", request }, { status: 201 })
+        const newReceiptNo = `R${currentYear}-${String(newIncrement).padStart(5, '0')}`;
+
+        const { studentNo, formType, quantity, paymentMethod, paymentStatus, printStatus } = await req.json();
+
+        const request = await Request.create({ 
+            receiptNo: newReceiptNo, 
+            studentNo, 
+            formType, 
+            quantity, 
+            paymentMethod, 
+            paymentStatus, 
+            printStatus 
+        });
+
+        return NextResponse.json({ message: "Request created successfully!", request }, { status: 201 });
     } catch (error) {
-        console.log("ERROR: ", error)
-        return NextResponse.json({ message: "An error occured while creating request", error: error.message }, { status: 500 })
+        console.log("ERROR: ", error);
+        return NextResponse.json({ message: "An error occurred while creating request", error: error.message }, { status: 500 });
     }
 }
 
