@@ -1,0 +1,117 @@
+{
+    "schedules": [
+        {
+            "schedule_id" : "19",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "ITNETW2",
+            "course_name": "Networking 2",
+            "section": "BSIT 3C",
+            "instructor_name": "Erwin Bautro",
+            "class_day": ["Mon", "Thu"],
+            "time" : {
+                "start_time": "8:30am",
+                "end_time": "10:00am"
+            } 
+        },
+        {
+            "schedule_id" : "20",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "ITHUMCI",
+            "course_name": "Human Computer Interaction",
+            "section": "BSIT 3C",
+            "instructor_name": "Jonas Macapacagal",
+            "class_day": ["Tue", "Fri"],
+            "time" : {
+                "start_time": "10:00am",
+                "end_time": "11:30am"
+            } 
+        },
+        {
+            "schedule_id" : "21",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "ITINFOM",
+            "course_name": "Information Management",
+            "section": "BSIT 3C",
+            "instructor_name": "Michael Mades",
+            "class_day": ["Mon", "Thu"],
+            "time" : {
+                "start_time": "10:00am",
+                "end_time": "11:30am"
+            } 
+        },
+        {
+            "schedule_id" : "20",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "ITAPPSDEV",
+            "course_name": "Application Development and Emerging Technologies",
+            "section": "BSIT 3C",
+            "instructor_name": "Marjon Umbay",
+            "class_day": ["Tue", "Fri"],
+            "time" : {
+                "start_time": "8:30am",
+                "end_time": "10:00am"
+            } 
+        },
+        {
+            "schedule_id" : "20",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "ITOPSYS",
+            "course_name": "Operating System",
+            "section": "BSIT 3C",
+            "instructor_name": "Erwin Bautro",
+            "class_day": ["Tue", "Fri"],
+            "time" : {
+                "start_time": "1:00pm",
+                "end_time": "2:30pm"
+            } 
+        },
+        {
+            "schedule_id" : "20",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "ITIASEC1",
+            "course_name": "Information Assurance and Security 1",
+            "section": "BSIT 3C",
+            "instructor_name": "Michael Mades",
+            "class_day": ["Mon", "Thu"],
+            "time" : {
+                "start_time": "7:00am",
+                "end_time": "8:30am"
+            } 
+        },
+        {
+            "schedule_id" : "20",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "IT ELEC 3",
+            "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+            "section": "BSIT 3C",
+            "instructor_name": "Cherilyn Lamadora",
+            "class_day": ["Wed"],
+            "time" : {
+                "start_time": "7:0am",
+                "end_time": "10:00am"
+            } 
+        },
+        {
+            "schedule_id" : "20",
+            "room_no": "209",
+            "building_name": "PRRC",
+            "course_code": "ITADBMS",
+            "course_name": "Advanced Database Management Systems",
+            "section": "BSIT 3C",
+            "instructor_name": "Rizza Mae Brao",
+            "class_day": ["Tue", "Fri"],
+            "time" : {
+                "start_time": "11:30am",
+                "end_time": "1:00pm"
+            } 
+        }
+
+    ]
+}

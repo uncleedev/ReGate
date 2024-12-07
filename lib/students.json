@@ -1,0 +1,3226 @@
+{
+    "students": [
+        {
+            "studentNo": "22-01383",
+            "firstname": "Jhon Brian",
+            "lastname": "Arce",
+            "gender": "Male",
+            "email": "arce.jhonbrian@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "studentNo": "22-01126",
+            "firstname": "Jose Enirque",
+            "lastname": "Soliman",
+            "gender": "Male",
+            "email": "solimanjoseenrique@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "studentNo": "22-01157",
+            "firstname": "Rogie",
+            "lastname": "Cabuñas",
+            "gender": "Male",
+            "email": "rjhaycamonias@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2C"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "studentNo": "22-01263",
+            "firstname": "Daniel",
+            "lastname": "Caparal",
+            "gender": "Male",
+            "email": "alyasdagie2004@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1G"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        }, 
+        {
+            "studentNo": "22-00572",
+            "firstname": "Tracy Jasmine ",
+            "lastname": "Cascayan",
+            "gender": "Female",
+            "email": "cascayantracy@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2F"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        }, 
+        {
+            "studentNo": "20-00600",
+            "firstname": "Angelene",
+            "lastname": "Villanovar",
+            "gender": " Female",
+            "email": "villanovarangelene1601@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1J"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2G"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "studentNo": "22-01812",
+            "firstname": "Annjie ",
+            "lastname": "Fernandez ",
+            "gender": "Female",
+            "email": "fernandezannjie23@gmail.cm",
+            "program": "BSIT",
+            "student_type": "Irregular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1H"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 5,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "studentNo": "22-01157",
+            "firstname": "Kurt Aeron",
+            "lastname": "Pandeagua",
+            "gender": "Male",
+            "email": "aeronpandeagua@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "studentNo": "22-01506",
+            "firstname": "Leilymarie",
+            "lastname": "Derramas",
+            "gender": "Female",
+            "email": "leilymross@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                },
+                                {
+                                    "course_code": "PURCOM",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1C"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "studentNo": "22-00106",
+            "firstname": "Harlenkens",
+            "lastname": "Sanchez",
+            "gender": "Male",
+            "email": "harlenkenssanchez@gmail.com",
+            "program": "BSIT",
+            "student_type": "Regular",
+            "years": [
+                {
+                    "year_level": 1,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "ITCOMP",
+                                    "course_name": "Introduction to Computer IT Fundamentals",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section": "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Computer Programming and Logic Formulations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE 2",
+                                    "course_name": "Reading in Philippine History",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE MATH",
+                                    "course_name": "Mathematics in the Modern World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE 1",
+                                    "course_name": "Understanding the Self",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "GE FIL 1",
+                                    "course_name": "Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "PE 1",
+                                    "course_name": "Physical Activity towards Health and Fitness",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                },
+                                {
+                                    "course_code": "NSTP 1 ",
+                                    "course_name": "IT National Service Training Program 1 ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1E"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "CCITCOM",
+                                    "course_name": "Discrete Structures",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "CCPROG2",
+                                    "course_name": "Computer Programming 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PROG1",
+                                    "course_name": "Purposive Communication",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "ART",
+                                    "course_name": "Art Appreciation ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "GE FIL 2",
+                                    "course_name": "Filipino sa Iba’t-ibang Disiplina, Daluma’t sa Filipino",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "LVITERA",
+                                    "course_name": "Living in IT era",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "PAHFIT 2",
+                                    "course_name": "PRhythmic Activities",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                },
+                                {
+                                    "course_code": "NSTP 2",
+                                    "course_name": "National Service Training Program 2",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 1F"
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "year_level": 2,
+                    "semesters": [
+                        {
+                            "semester_level": 1,
+                            "courses": [
+                                {
+                                    "course_code": "CCPROG3",
+                                    "course_name": "Data Structure and Algorithms",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITELEC1",
+                                    "course_name": "IT Elective 1 (Web System Technologies)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "CONWRLD",
+                                    "course_name": "The Contemporary World",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SIA1",
+                                    "course_name": "System Integration and Architecture 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ITSPRAC",
+                                    "course_name": "Social Issues and Professional Practice",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SCITECH",
+                                    "course_name": "Science, Technology and Society",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 12",
+                                    "course_name": "Reading Visual Arts",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PAHFIT 3",
+                                    "course_name": "Individual/ Dual Sports",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        },
+                        {
+                            "semester_level": 2,
+                            "courses": [
+                                {
+                                    "course_code": "ACSS",
+                                    "course_name": "Advanced Computer System Servicing",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "ELECT 2 (OOP)",
+                                    "course_name": "IT Elective 2 (Object-Oriented Programming)",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "NET1",
+                                    "course_name": "Networking 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "GE 5",
+                                    "course_name": "Ethics ",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "FDBS",
+                                    "course_name": "Fundamentals of Databse Systems",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "SSD",
+                                    "course_name": "System Software Design",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "IPT",
+                                    "course_name": "Integrative Programming and Technologies 1",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                },
+                                {
+                                    "course_code": "PE 4",
+                                    "course_name": "Team Sports and Recreations",
+                                    "credits": 3,
+                                    "grade": 1.25,
+                                    "section":  "BSIT 2B"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            ],
+            "enrolled": {
+                "year_level": 3,
+                "semester_level": 1,
+                "courses": [
+                    {
+                        "course_code": "ITNETW2",
+                        "course_name": "Networking 2",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITINFOM",
+                        "course_name": "Information Management",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITAPPSDEV",
+                        "course_name": "Application Development and Emerging Technologies",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITOPSYS",
+                        "course_name": "Operating System",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITIASEC1",
+                        "course_name": "Information Assurance and Security 1",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITHUMCI",
+                        "course_name": "Human Computer Interctions",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "IT ELEC 3",
+                        "course_name": "IT ELECT 3 (Integrative Programming and Technology",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    },
+                    {
+                        "course_code": "ITADBMS",
+                        "course_name": "Advanced Database Management Systems",
+                        "credits": 3,
+                        "section":  "BSIT 3C"
+                    }
+                ]
+            }
+            
+        }
+
+    ]
+
+}
