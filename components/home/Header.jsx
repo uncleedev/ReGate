@@ -60,6 +60,8 @@ export default function Header() {
                 <li className='menu__item relative group'>
                     <Link href={""}>Services ▼</Link>
                     <ul className='dropdown__menu group-hover:block w-[200px]'>
+                        <Link href={"/handbook"}><li className='dropdown__item'>Student Handbook</li></Link>
+                        <Link href={"/news"}><li className='dropdown__item'>News and Events</li></Link>
                         <Link href={"/news"}><li className='dropdown__item'>News and Events</li></Link>
                         <Link href={"/announcements"}><li className='dropdown__item'>Announcements</li></Link>
                         <Link href={"/about"}><li className='dropdown__item'>About</li></Link>

@@ -37,9 +37,7 @@ export default function ScheduleComponent({ user }) {
     useEffect(() => {
         if (schedules.length > 0 && instructor) {
             const mySchedules = schedules.filter(schedule => 
-                instructor.handle_courses.some(course => 
-                    course.sections.includes(schedule.section) && schedule.course_code === course.course_code
-                )
+                (instructor.firstname + " " + instructor.lastname) === schedule.instructor_name
             );
             setMySchedules(mySchedules);
         }

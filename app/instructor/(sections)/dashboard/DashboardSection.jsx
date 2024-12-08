@@ -52,9 +52,7 @@ export default function DashboardSection({user}) {
   useEffect(() => {
     if (schedules.length > 0 && instructor) {
       const mySchedules = schedules.filter(schedule => 
-        instructor?.enrolled?.courses.some(course => 
-          schedule.section === course.section && schedule.course_code === course.course_code
-        )
+        (instructor.firstname + " " + instructor.lastname) === schedule.instructor_name
       );
 
       const today = getCurrentDay();
@@ -90,7 +88,7 @@ export default function DashboardSection({user}) {
 
       <div className='w-full grid grid-cols-5 gap-4 h-full'>
         <div className={`col-span-3 ${isDarkMode ? `bg-[#282828]` : 'bg-white'} shadow-md rounded-lg flex flex-col items-center gap-4 p-3`}>
-          <h2 className={`border-b-2 ${isDarkMode ? ` border-[#FFE714]` : `border-[#044721]`} inline-block`}>Enrolled Courses</h2>
+          <h2 className={`border-b-2 ${isDarkMode ? ` border-[#FFE714]` : `border-[#044721]`} inline-block`}>Handle Courses</h2>
 
           <table className='flex flex-col w-full shadow-md rounded-md'>
             <thead className='w-full'>
@@ -98,20 +96,22 @@ export default function DashboardSection({user}) {
                 <th className='data items-center'>Course Code</th>
                 <th className='data items-center'>Course Name</th>
                 <th className='data items-center'>Credits</th>
+                <th className='data items-center'>Sections</th>
               </tr>
             </thead>
             <tbody className='w-full overflow-y-auto hide-scrollbar' style={{ maxHeight: '385px' }}>
-              {instructor?.enrolled?.courses?.length > 0 ? (
-                instructor.enrolled.courses.map((course, index) => (
+              {instructor?.handle_courses?.length > 0 ? (
+                instructor.handle_courses.map((course, index) => (
                   <tr key={index} className='row'>
                     <td className='data p-1 items-center'>{course.course_code}</td>
                     <td className='data p-1 items-center'>{course.course_name}</td>
                     <td className='data p-1 items-center'>{course.credits}</td>
+                    <td className='data p-1 items-center'>{course.sections.join(', ')}</td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="3" className='data p-1 text-center'>No courses enrolled</td>
+                  <td colSpan="4" className='data p-1 text-center'>No courses handled</td>
                 </tr>
               )}
             </tbody>

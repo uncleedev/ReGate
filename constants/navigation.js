@@ -33,11 +33,6 @@ export const InstructorMenu = [
         name: "Schedules",
         icon: require("@/public/icons/schedules.png"),
         link: "/instructor/schedules",
-    },
-    {
-        name: "Requests",
-        icon: require("@/public/icons/forms.png"),
-        link: "/instructor/requests",
     }
 ]
 
