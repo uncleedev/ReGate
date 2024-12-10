@@ -60,7 +60,7 @@ export default function SwiperAnnouncement() {
     >
       {announcements.map((data) => (
         <SwiperSlide key={data.id} className='w-full flex justify-center items-center relative'>
-          <Link href={`/announcement/${data._id}`}>
+          <Link href={`/announcements/${data._id}`}>
             <Image 
               src={data.image} 
               alt={data.title} 

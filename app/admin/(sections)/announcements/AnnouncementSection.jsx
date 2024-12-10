@@ -7,7 +7,7 @@ import { useTheme } from '@/context/ThemeContext'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 
-const ITEMS_PER_PAGE = 8
+const ITEMS_PER_PAGE = 5
 
 export default function AnnouncementSection() {
 
