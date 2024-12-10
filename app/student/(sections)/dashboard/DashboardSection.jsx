@@ -1,10 +1,11 @@
 "use client"
-import PieChartComp from '@/components/charts/PieChartComp'
+import PieChartComponent from '@/components/charts/PieChartComp'
 import SwiperAnnouncement from '@/components/home/SwiperAnnouncement'
 import CardSchedule from '@/components/portal/CardSchedule'
 import { cardColors } from '@/constants/cardColors'
 import { useTheme } from '@/context/ThemeContext'
 import React, {useState, useEffect} from 'react'
+import { Pie, PieChart, ResponsiveContainer } from 'recharts'
 
 export default function DashboardSection({user}) {
 
@@ -82,9 +83,9 @@ export default function DashboardSection({user}) {
           <SwiperAnnouncement />
         </div>
 
-        <div className={`col-span-2 ${isDarkMode ? `bg-[#282828]` : 'bg-white'} shadow-md rounded-lg flex flex-col items-center justify-start p-3 w-full h-full`}>
+        <div className={`col-span-2 ${isDarkMode ? `bg-[#282828]` : 'bg-white'} shadow-md rounded-lg flex flex-col items-center justify-start p-3`}>
           <h2 className={`border-b-2 ${isDarkMode ? 'border-[#FFE714]' : `border-[#044721]`}  mb-8`}>Request</h2>
-
+          {/* <PieChartComponent /> */}
         </div>
       </div>
 

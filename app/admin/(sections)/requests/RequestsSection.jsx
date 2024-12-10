@@ -457,8 +457,9 @@ export default function RequestsSection() {
               onChange={(e) => setEditItem({ ...editItem, formType: e.target.value })}
             >
               <option disabled value="default">Select Form Type</option>
-              <option value="OVRF">OVRF</option>
-              <option value="FORM 137">Form 137</option>
+              <option value="Sample 1">Sample 1</option>
+              <option value="Sample 2">Sample 2</option>
+              <option value="Sample 3">Sample 3</option>
             </select>
           </div>
 
